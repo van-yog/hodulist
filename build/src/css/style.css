@@ -1,0 +1,20 @@
+@import url("/src/css/header.css");
+@import url("/src/css/nav.css");
+@import url("/src/css/main.css");
+@import url("/src/css/contact.css");
+@import url("/src/css/show.css");
+
+.bg {
+  background-image: url(/src/img/bg_photo.jpg);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(/src/img/bg_texture.jpg);
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}

@@ -1,0 +1,46 @@
+.main {
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.main__header {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px rgba(77, 77, 77, 0.81);
+}
+
+.main__text {
+  text-shadow: 2px 2px 1px rgba(77, 77, 77, 0.81);
+}
+
+.main__marquee {
+  height: 170px;
+  box-shadow: 0px 0px 8px 3px rgba(192, 192, 192, 0.555);
+  margin-right: 12px;
+}
+
+.main__youtube {
+  width: 800px;
+  height: 460px;
+  box-shadow: 0px 0px 18px 5px silver;
+  margin-bottom: 40px;
+}
+
+.main__vimeo {
+  width: 640px;
+  height: 360px;
+  margin-bottom: 40px;
+  border: 1px solid silver;
+  box-shadow: 0px 0px 18px 5px silver;
+}
+
+.main__video {
+  width: 540px;
+  height: 300px;
+  margin-bottom: 40px;
+  border: 1px solid silver;
+  box-shadow: 0px 0px 18px 5px silver;
+}

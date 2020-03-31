@@ -1,0 +1,87 @@
+.nav {
+  position: relative;
+}
+
+#nav__index {
+  position: absolute;
+  left: 58px;
+  top: 138px;
+}
+
+#nav__spectacle {
+  position: absolute;
+  left: 60px;
+  top: 170px;
+}
+
+#nav__performance {
+  position: absolute;
+  left: 60px;
+  top: 199px;
+}
+
+#nav__costume {
+  position: absolute;
+  left: 60px;
+  top: 224px;
+}
+
+#nav__contact {
+  position: absolute;
+  left: 60px;
+  top: 250px;
+}
+
+.nav__contacts {
+  width: 228px;
+}
+
+.nav__index-img {
+  background-image: url("/src/icon/nav_index_ua.png");
+  height: 30px;
+  width: 151px;
+}
+
+.nav__spectacle-img {
+  background-image: url("/src/icon/nav_spectacle_ua.png");
+  height: 28px;
+  width: 150px;
+}
+
+.nav__performance-img {
+  background-image: url("/src/icon/nav_performance_ua.png");
+  height: 25px;
+  width: 149px;
+}
+
+.nav__costume-img {
+  background-image: url("/src/icon/nav_costume_ua.png");
+  height: 30px;
+  width: 149px;
+}
+
+.nav__contact-img {
+  background-image: url("/src/icon/nav_contact_ua.png");
+  height: 34px;
+  width: 140px;
+}
+
+.nav__index-img:hover {
+  background-image: url("/src/icon/nav_index_ua_bg.png");
+}
+
+.nav__spectacle-img:hover {
+  background-image: url("/src/icon/nav_spectacle_ua_bg.png");
+}
+
+.nav__performance-img:hover {
+  background-image: url("/src/icon/nav_performance_ua_bg.png");
+}
+
+.nav__costume-img:hover {
+  background-image: url("/src/icon/nav_costume_ua_bg.png");
+}
+
+.nav__contact-img:hover {
+  background-image: url("/src/icon/nav_contact_ua_bg.png");
+}
