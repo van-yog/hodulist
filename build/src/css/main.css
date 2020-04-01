@@ -23,7 +23,7 @@
 }
 
 .main__youtube {
-  width: 800px;
+  width: 740px;
   height: 460px;
   box-shadow: 0px 0px 18px 5px silver;
   margin-bottom: 40px;
@@ -43,4 +43,27 @@
   margin-bottom: 40px;
   border: 1px solid silver;
   box-shadow: 0px 0px 18px 5px silver;
+}
+
+@media (max-width: 992px) {
+  .main__youtube {
+    width: 550px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__youtube {
+    width: 460px;
+    height: 270px;
+    box-shadow: 0px 0px 8px 4px silver;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main__youtube {
+    width: 330px;
+    height: 180px;
+  }
 }

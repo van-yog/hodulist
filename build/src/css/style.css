@@ -4,17 +4,12 @@
 @import url("./contact.css");
 @import url("./show.css");
 
-.bg {
-  background-image: url(../img/bg_photo.jpg);
-  background-repeat: no-repeat;
-}
-
 body {
+  width: auto;
   margin: 0;
   padding: 0;
-  background-image: url(../img/bg_texture.jpg);
-  background-repeat: repeat-x;
-  background-repeat: repeat-y;
+  background-image: url(../img/bg_photo.jpg), url(../img/bg_texture.jpg);
+  background-repeat: no-repeat, repeat;
   font-family: Verdana, Geneva, sans-serif;
   font-size: 14px;
   line-height: 1.4;

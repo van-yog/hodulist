@@ -18,21 +18,77 @@
   </head>
 
   <body>
-   <div class="bg">
-      <!-- Header -->
+    <!-- Mobile navigation -->
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light navigation-visibility-mobile">
+      <button class="navbar-toggler bg-light" type="button" data-toggle="offcanvas">
+        <span class=" navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse offcanvas-collapse mobile__bg-style" id="navbarSupportedContent">
+        <button class="offcanvas-close text-light" type="button" data-toggle="offcanvas-close">
+          ×
+        </button>
+        <!-- Тут вставить фонарь -->
+        <nav>
+          <div class="nav ml-lg-3">
+            <div>
+              <img class="d-block mb-5 overflow-hidden" src="./src/icon/lamp.png" alt="Ліхтар" />
+            </div>
+
+            <div id="nav__index">
+              <a href="index.html">
+                <p class="nav__index-img"></p>
+              </a>
+            </div>
+
+            <div id="nav__spectacle">
+              <a href="spectacle.html">
+                <p class="nav__spectacle-img"></p>
+              </a>
+            </div>
+
+            <div id="nav__performance">
+              <a href="performance.html">
+                <p class="nav__performance-img"></p>
+              </a>
+            </div>
+
+            <div id="nav__costume">
+              <a href="costume.html">
+                <p class="nav__costume-img"></p>
+              </a>
+            </div>
+
+            <div id="nav__contact">
+              <a href="contact.html">
+                <p class="nav__contact-img"></p>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="container-fluid">
+      <div class="row mb-1 mb-sm-4">
+        <div class="col-12 text-center  d-flex flex-wrap justify-content-center">
+          <img class="header__img order-1 ml-4 m-sm-0" src="./src/icon/teatr2ukr.gif" alt="Вуличний" />
+          <a class="order-3 order-sm-2" href="index.html">
+            <img class="header__img" src="./src/icon/highlights.png" alt="Highlights" />
+          </a>
+          <a class="order-4 order-sm-3" href="index.html">
+            <img class="header__img" src="./src/icon/logo.png" alt="логотип" />
+          </a>
+          <img class="header__img order-2 order-sm-4" src="./src/icon/teatr3.gif" alt="театр" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Social networks and languages with flag icons -->
     <div class="container">
       <div class="row ">
-        <div class="col-12 text-center mb-4">
-          <a href="index.html ">
-            <img class="header__img1 d-none d-md-inline" src="./src/icon/teatr2ukr.gif" alt="Вуличний" />
-            <img src="./src/icon/highlights.png" alt="Highlights" />
-            <img src="./src/icon/logo.png" alt="логотип" />
-            <img class="header__img2 d-none d-md-inline" src="./src/icon/teatr3.gif" alt="театр" />
-          </a>
-        </div>
-
-        <div class="col-12 d-flex justify-content-between mb-2 ">
-          <div class="mx-5 pl-4">
+        <div class="col-12 d-flex justify-content-between mb-md-2 ">
+          <div class="mx-md-5 pl-md-4">
             <a href="http://www.facebook.com/StiltwalkersKyiv" target="_blank">
               <img class="mx-1" src="./src/icon/facebook.png" alt="Наш Facebook" />
             </a>
@@ -41,7 +97,7 @@
             </a>
           </div>
 
-          <div class="mx-5 pr-4 my-auto">
+          <div class="ml-auto mx-md-5 pr-4 my-auto">
             <a href="index.html">
               <img class="header__flag" src="./src/icon/flag_ua.gif" alt="Українською" />
             </a>
@@ -58,13 +114,13 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-3 ml-5">
-          <!-- Navigation -->
+        <!-- Navigation -->
+        <div class="col-3 ml-lg-5 d-none d-md-block">
           <nav>
-            <div class="nav ml-3">
+            <div class="nav ml-lg-3">
               <div>
                 <img class="d-block mb-5" src="./src/icon/lamp.png" alt="Ліхтар" />
-                <img class="nav__contacts" src="./src/icon/contacts.png" alt="Контакти" />
+                <img class="nav__contacts pr-2" src="./src/icon/contacts.png" alt="Контакти" />
               </div>
 
               <div id="nav__index">
@@ -100,20 +156,21 @@
           </nav>
         </div>
 
-        <div class="col-8 pr-4 main">
+        <!-- First block of content -->
+        <div class="col-12 col-md-8 ml-md-5 ml-lg-0 pr-0 pr-md-4 main">
           <div>
-            <h1 class="text-center mt-2 mb-2">
+            <h1 class="text-center mt-md-2 mb-md-2">
               <span class="main__header">Вітаємо Вас!</span>
             </h1>
-            <p class="main__text text-justify pr-5">
+            <p class="main__text text-justify pr-md-5">
               Вітаємо на сайті київського вуличного театру "Хайлайтс". Вуличний театр, який вийшов за звичні рамки
               сцени-коробки назустріч своєму глядачу. І, крокуючи вулицями, викликає інтерес, захоплення і відчуття
               радості у кожного перехожого.
             </p>
           </div>
 
-          <div class="m-1 mb-4">
-            <img src="./src/img/collage.png" alt='Вуличний театр "Хайлайтс"' />
+          <div>
+            <img class="w-100 px-md-3 mb-md-2" src="./src/img/collage.png" alt='Вуличний театр "Хайлайтс"' />
           </div>
 
           <p class=" text-justify pr-4">
@@ -129,9 +186,10 @@
       </div>
     </div>
 
+    <!-- Second block of content -->
     <div class="container">
       <div class="row">
-        <div class="col-12 mb-5">
+        <div class="col-12 mb-3 mb-mb-5">
           <marquee height="200" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="5" class="p-3">
             <a href="./src/img/jokers.jpg" target="_blank">
               <img src="./src/img/jokers.jpg" class="main__marquee" />
@@ -219,11 +277,38 @@
       <!-- Разная статистика нужно доработать и разобраться -->
     </div>
 
-      <div class="offset-9 main my-3">
-        <small>© вуличний театр "Highlights ", 2011-2018</small>
-      </div>
-    </footer>
-    <footer>
-   </div>
+    <div class="text-right main mr-5 my-3">
+      <small>© вуличний театр "Highlights ", 2011-2018</small>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(function() {
+        "use strict";
+        $('[data-toggle="offcanvas"]').on("click", function() {
+          $(".offcanvas-collapse").addClass("open");
+          $("body").addClass("offcanvas-open");
+        });
+        $('[data-toggle="offcanvas-close"]').on("click", function() {
+          $(".offcanvas-collapse").removeClass("open");
+          $("body").removeClass("offcanvas-open");
+        });
+      });
+    </script>
   </body>
 </html>
