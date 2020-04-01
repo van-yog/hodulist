@@ -18,266 +18,359 @@
   </head>
 
   <body>
-    <div class="bg">
-      <!-- Header -->
-      <div class="container">
-        <div class="row ">
-          <div class="col-12 text-center mb-4">
-            <a href="index.html ">
-              <img class="header__img1 d-none d-md-inline" src="./src/icon/teatr2ukr.gif" alt="Вуличний" />
-              <img src="./src/icon/highlights.png" alt="Highlights" />
-              <img src="./src/icon/logo.png" alt="логотип" />
-              <img class="header__img2 d-none d-md-inline" src="./src/icon/teatr3.gif" alt="театр" />
+    <!-- Mobile navigation -->
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light navigation-visibility-mobile">
+      <button class="navbar-toggler bg-light" type="button" data-toggle="offcanvas">
+        <span class=" navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse offcanvas-collapse mobile__bg-style" id="navbarSupportedContent">
+        <button class="offcanvas-close text-light" type="button" data-toggle="offcanvas-close">
+          ×
+        </button>
+        <!-- Тут вставить фонарь -->
+        <nav>
+          <div class="nav ml-lg-3">
+            <div>
+              <img class="d-block mb-5 overflow-hidden" src="./src/icon/lamp.png" alt="Ліхтар" />
+            </div>
+
+            <div id="nav__index">
+              <a href="index.html">
+                <p class="nav__index-img"></p>
+              </a>
+            </div>
+
+            <div id="nav__spectacle">
+              <a href="spectacle.html">
+                <p class="nav__spectacle-img"></p>
+              </a>
+            </div>
+
+            <div id="nav__performance">
+              <a href="performance.html">
+                <p class="nav__performance-img"></p>
+              </a>
+            </div>
+
+            <div id="nav__costume">
+              <a href="costume.html">
+                <p class="nav__costume-img"></p>
+              </a>
+            </div>
+
+            <div id="nav__contact">
+              <a href="contact.html">
+                <p class="nav__contact-img"></p>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="container-fluid">
+      <div class="row mb-1 mb-sm-4">
+        <div class="col-12 text-center  d-flex flex-wrap justify-content-center">
+          <img class="header__img order-1 ml-4 m-sm-0" src="./src/icon/teatr2ukr.gif" alt="Вуличний" />
+          <a class="order-3 order-sm-2" href="index.html">
+            <img class="header__img" src="./src/icon/highlights.png" alt="Highlights" />
+          </a>
+          <a class="order-4 order-sm-3" href="index.html">
+            <img class="header__img" src="./src/icon/logo.png" alt="логотип" />
+          </a>
+          <img class="header__img order-2 order-sm-4" src="./src/icon/teatr3.gif" alt="театр" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Social networks and languages with flag icons -->
+    <div class="container">
+      <div class="row ">
+        <div class="col-12 d-flex justify-content-between mb-md-2 ">
+          <div class="mx-md-5 pl-md-4">
+            <a href="http://www.facebook.com/StiltwalkersKyiv" target="_blank">
+              <img class="mx-1" src="./src/icon/facebook.png" alt="Наш Facebook" />
+            </a>
+            <a href="http://www.instagram.com/stiltwalkers/" target="_blank">
+              <img class="mx-1" src="./src/icon/insta.png" alt="Наш Instagram" />
             </a>
           </div>
 
-          <div class="col-12 d-flex justify-content-between mb-2 ">
-            <div class="mx-5 pl-4">
-              <a href="http://www.facebook.com/StiltwalkersKyiv" target="_blank">
-                <img class="mx-1" src="./src/icon/facebook.png" alt="Наш Facebook" />
-              </a>
-              <a href="http://www.instagram.com/stiltwalkers/" target="_blank">
-                <img class="mx-1" src="./src/icon/insta.png" alt="Наш Instagram" />
-              </a>
-            </div>
-
-            <div class="mx-5 pr-4 my-auto">
-              <a href="index.html">
-                <img class="header__flag" src="./src/icon/flag_ua.gif" alt="Українською" />
-              </a>
-              <a href="enindex.html">
-                <img class="header__flag" src="./src/icon/flag_en.gif" alt="English" />
-              </a>
-              <a href="http://www.kievtheatre.eu/" target="_blank">
-                <img class="header__flag" src="./src/icon/flag_pl.gif" alt="Polska" />
-              </a>
-            </div>
+          <div class="ml-auto mx-md-5 pr-4 my-auto">
+            <a href="index.html">
+              <img class="header__flag" src="./src/icon/flag_ua.gif" alt="Українською" />
+            </a>
+            <a href="enindex.html">
+              <img class="header__flag" src="./src/icon/flag_en.gif" alt="English" />
+            </a>
+            <a href="http://www.kievtheatre.eu/" target="_blank">
+              <img class="header__flag" src="./src/icon/flag_pl.gif" alt="Polska" />
+            </a>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="container">
-        <div class="row">
-          <div class="col-3 ml-5">
-            <!-- Navigation -->
-            <nav>
-              <div class="nav ml-3">
-                <div>
-                  <img class="d-block mb-5" src="./src/icon/lamp.png" alt="Ліхтар" />
-                  <img class="nav__contacts" src="./src/icon/contacts.png" alt="Контакти" />
-                </div>
-
-                <div id="nav__index">
-                  <a href="index.html">
-                    <p class="nav__index-img"></p>
-                  </a>
-                </div>
-
-                <div id="nav__spectacle">
-                  <a href="spectacle.html">
-                    <p class="nav__spectacle-img"></p>
-                  </a>
-                </div>
-
-                <div id="nav__performance">
-                  <a href="performance.html">
-                    <p class="nav__performance-img"></p>
-                  </a>
-                </div>
-
-                <div id="nav__costume">
-                  <a href="costume.html">
-                    <p class="nav__costume-img"></p>
-                  </a>
-                </div>
-
-                <div id="nav__contact">
-                  <a href="contact.html">
-                    <p class="nav__contact-img"></p>
-                  </a>
-                </div>
+    <div class="container">
+      <div class="row">
+        <!-- Navigation -->
+        <div class="col-3 ml-lg-5 d-none d-md-block">
+          <!-- Navigation -->
+          <nav>
+            <div class="nav ml-3">
+              <div>
+                <img class="d-block mb-5" src="./src/icon/lamp.png" alt="Ліхтар" />
+                <img class="d-none d-xl-block nav__contacts" src="./src/icon/contacts.png" alt="Контакти" />
               </div>
-            </nav>
-          </div>
 
-          <div class="col-8 pr-4 contact pr-1 pt-3 ">
-            <div class="row mb-5">
-              <div class="col-8 text-justify px-4">
-                <p>
-                  Погодьтеся, приємно дивитись на роботу професіоналів.
-                </p>
-                <p class="text-justify">
-                  У наших виставах, і на парадах, і на будь-яких святкуваннях та заходах на ходулях працюють драматичні
-                  актори київських театрів. Це гарантія того, що наші ходулісти весело і невимушено розважають, танцюють
-                  і спілкуються з глядачами, а не переминаються з ноги на ногу з кам'яним обличчям, підпираючи стелю.
-                  Плюс величезний вибір - у нас більш ніж 70 різноманітних яскравих костюмів і 10 танцювальних номерів
-                  на ходулях на всі випадки.
-                </p>
-                <p>
-                  Ми вміємо і дуже любимо радувати людей.
-                </p>
-                <p>
-                  Кличте нас, домовимося.
-                </p>
-              </div>
-              <div class="col-4 my-auto">
-                <a href="./src/img/contact.jpg" target="_blank">
-                  <img class="contact__img" src="./src/img/contact.jpg" />
+              <div id="nav__index">
+                <a href="index.html">
+                  <p class="nav__index-img"></p>
                 </a>
-                <a href="./src/img/cancan.jpg" target="_blank">
-                  <img class="contact__img" src="./src/img//cancan.jpg" />
+              </div>
+
+              <div id="nav__spectacle">
+                <a href="spectacle.html">
+                  <p class="nav__spectacle-img"></p>
+                </a>
+              </div>
+
+              <div id="nav__performance">
+                <a href="performance.html">
+                  <p class="nav__performance-img"></p>
+                </a>
+              </div>
+
+              <div id="nav__costume">
+                <a href="costume.html">
+                  <p class="nav__costume-img"></p>
+                </a>
+              </div>
+
+              <div id="nav__contact">
+                <a href="contact.html">
+                  <p class="nav__contact-img"></p>
                 </a>
               </div>
             </div>
+          </nav>
+        </div>
 
-            <div class="row text-center contact__table mb-3">
-              <table width="100%" border="2">
-                <tr>
-                  <th width="48%" rowspan="2" scope="col">Робота одного артиста на ходулях</th>
-                  <th colspan="2" scope="col">Київ</th>
-                  <th colspan="2" scope="col">Інші міста</th>
-                </tr>
-                <tr>
-                  <th width="13%">1 година</th>
-                  <th width="13%">2 години*</th>
-                  <th width="13%">1 година</th>
-                  <th width="13%">2 години*</th>
-                </tr>
-                <tr>
-                  <th>Основні костюми</th>
-                  <th>1200 грн</th>
-                  <th>2000 грн*</th>
-                  <th>1500 грн + проїзд</th>
-                  <th>2500 грн* + проїзд</th>
-                </tr>
-                <tr>
-                  <th>
-                    Надскладні костюми: <br />
-                    <a href=" ./src/img/birds1.jpg" target="_blank">Білі птахи</a>,
-                    <a href=" ./src/img/samba2.jpg" target="_blank">Самба</a>,
-                    <a href=" ./src/img/lightAngels2.jpg" target="_blank">Світлі ангели</a>,
-                    <a href=" ./src/img/ukrman3.jpg" target="_blank">Вершники</a>,
-                    <a href=" ./src/img/izba1.jpg" target="_blank">Ізбушка</a>,
-                    <a href=" ./src/img/gorynych.jpg" target="_blank">Горинич</a>,
-                    <a href=" ./src/img/robot2.jpg" target="_blank">Робот</a>,
-                    <a href=" ./src/img/NewMoroz.jpg" target="_blank">Дід Мороз</a>
-                    <br />
-                    <a href=" ./src/img/bird4.jpg" target="_blank">
-                      <img src=" ./src/img/bird4.jpg" width="59" height="75" />
-                    </a>
-                    <a href=" ./src/img/sambaRed.jpg" target="_blank">
-                      <img src=" ./src/img/sambaRedSM.png" width="59" height="75" />
-                    </a>
-                    <a href=" ./src/img/lightAngels3.jpg" target="_blank">
-                      <img src=" ./src/img/lightAngels3SM.png" width="98" height="75" />
-                    </a>
-                    <a href=" ./src/img/ukrman3.jpg" target="_blank">
-                      <img src=" ./src/img/ukrman3SM.png" width="59" height="75" />
-                    </a>
-                    <a href=" ./src/img/izba1.jpg" target="_blank">
-                      <img src=" ./src/img/izba1SM.png" width="58" height="75" />
-                    </a>
-                    <a href=" ./src/img/gorynych.jpg" target="_blank">
-                      <img src=" ./src/img/GorynychSM.png" width="58" height="75" />
-                    </a>
-                    <a href=" ./src/img/robot2.jpg" target="_blank">
-                      <img src=" ./src/img/robot2SM.png" width="58" height="75" />
-                    </a>
-                    <a href=" ./src/img/NewMoroz.jpg" target="_blank">
-                      <img src=" ./src/img/NewMorozSM.png" width="58" height="75" />
-                    </a>
-                  </th>
-                  <th>2000 грн</th>
-                  <th>3000 грн</th>
-                  <th>2500 грн + проїзд</th>
-                  <th>3000 грн+ проїзд</th>
-                </tr>
-              </table>
-            </div>
-
-            <div class="row mb-5">
-              <p>*При великих проектах (від 10 робочих годин) – <span class="contact__price">500 грн/година</span></p>
+        <!-- First block of content -->
+        <div class="col-12 col-md-8 contact pr-1 pt-3 ">
+          <div class="row mb-5">
+            <div class="col-12 col-lg-8 text-justify mr-2 pr-2 offset-md-2 offset-lg-0">
               <p>
-                З приводу вуличних вистав, танцювальних номерів на ходулях, участі в різноманітних проектах та з усіх
-                інших питань звертайтесь:
+                Погодьтеся, приємно дивитись на роботу професіоналів.
+              </p>
+              <p class="text-justify">
+                У наших виставах, і на парадах, і на будь-яких святкуваннях та заходах на ходулях працюють драматичні
+                актори київських театрів. Це гарантія того, що наші ходулісти весело і невимушено розважають, танцюють і
+                спілкуються з глядачами, а не переминаються з ноги на ногу з кам'яним обличчям, підпираючи стелю. Плюс
+                величезний вибір - у нас більш ніж 70 різноманітних яскравих костюмів і 10 танцювальних номерів на
+                ходулях на всі випадки.
+              </p>
+              <p>
+                Ми вміємо і дуже любимо радувати людей.
+              </p>
+              <p>
+                Кличте нас, домовимося.
               </p>
             </div>
 
-            <div class="row contact__info">
-              <div class="col-3 mb-3">
-                <a href="http://www.facebook.com/alex.svietliakov" target="_blank">
-                  <img src="./src/icon/facebook.png" alt="facebook" />
-                </a>
-                <a href="https://www.instagram.com/stiltwalkers/" target="_blank">
-                  <img src="./src/icon/insta.png" alt="insta" />
-                </a>
-                <a href="https://www.youtube.com/channel/UCJecQvoljq84E2bJCNoh5RQ">
-                  <img src="./src/icon/youtube.png" alt="youtube" />
-                </a>
-              </div>
-              <div class="col-9 contact__logo-block">
-                <img class="contact__logo-block-img" src="./src/icon/LOGOTYP.jpg" alt="Logo" />
-                <p class="contact__name">Олександр Свєтляков</p>
-              </div>
+            <div class="col-12 col-lg-3  my-auto text-center">
+              <a href="./src/img/contact.jpg" target="_blank">
+                <img class="contact__img m-2" src="./src/img/contact.jpg" />
+              </a>
+              <a class="d-none d-md-inline-block" href="./src/img/cancan.jpg" target="_blank">
+                <img class="contact__img m-2" src="./src/img//cancan.jpg" />
+              </a>
+            </div>
+          </div>
 
-              <div class="col-3 mb-3">
-                <img src=" ./src/icon/viber.png" />
-                <img src=" ./src/icon/whatsapp.png" />
-                <img src=" ./src/icon/vodafone.png" />
-              </div>
+          <div class="row text-center contact__table mb-3">
+            <table width="100%" border="2">
+              <tr>
+                <th width="48%" rowspan="2" scope="col">Робота одного артиста на ходулях</th>
+                <th colspan="2" scope="col">Київ</th>
+                <th colspan="2" scope="col">Інші міста</th>
+              </tr>
+              <tr>
+                <th width="13%">1 година</th>
+                <th width="13%">2 години*</th>
+                <th width="13%">1 година</th>
+                <th width="13%">2 години*</th>
+              </tr>
+              <tr>
+                <th>Основні костюми</th>
+                <th>1200 грн</th>
+                <th>2000 грн*</th>
+                <th>1500 грн + проїзд</th>
+                <th>2500 грн* + проїзд</th>
+              </tr>
+              <tr>
+                <th>
+                  Надскладні костюми: <br />
+                  <a href=" ./src/img/birds1.jpg" target="_blank">Білі птахи</a>,
+                  <a href=" ./src/img/samba2.jpg" target="_blank">Самба</a>,
+                  <a href=" ./src/img/lightAngels2.jpg" target="_blank">Світлі ангели</a>,
+                  <a href=" ./src/img/ukrman3.jpg" target="_blank">Вершники</a>,
+                  <a href=" ./src/img/izba1.jpg" target="_blank">Ізбушка</a>,
+                  <a href=" ./src/img/gorynych.jpg" target="_blank">Горинич</a>,
+                  <a href=" ./src/img/robot2.jpg" target="_blank">Робот</a>,
+                  <a href=" ./src/img/NewMoroz.jpg" target="_blank">Дід Мороз</a>
+                  <br />
+                  <a class="d-none d-sm-inline-block" href=" ./src/img/bird4.jpg" target="_blank">
+                    <img src=" ./src/img/bird4.jpg" width="59" height="75" />
+                  </a>
+                  <a class="d-none d-sm-inline-block" href=" ./src/img/sambaRed.jpg" target="_blank">
+                    <img src=" ./src/img/sambaRedSM.png" width="59" height="75" />
+                  </a>
+                  <a class="d-none d-sm-inline-block" href=" ./src/img/lightAngels3.jpg" target="_blank">
+                    <img src=" ./src/img/lightAngels3SM.png" width="98" height="75" />
+                  </a>
+                  <a class="d-none d-sm-inline-block" href=" ./src/img/ukrman3.jpg" target="_blank">
+                    <img src=" ./src/img/ukrman3SM.png" width="59" height="75" />
+                  </a>
+                  <a class="d-none d-sm-inline-block" href=" ./src/img/izba1.jpg" target="_blank">
+                    <img src=" ./src/img/izba1SM.png" width="58" height="75" />
+                  </a>
+                  <a class="d-none d-sm-inline-block" href=" ./src/img/gorynych.jpg" target="_blank">
+                    <img src=" ./src/img/GorynychSM.png" width="58" height="75" />
+                  </a>
+                  <a class="d-none d-sm-inline-block" href=" ./src/img/robot2.jpg" target="_blank">
+                    <img src=" ./src/img/robot2SM.png" width="58" height="75" />
+                  </a>
+                  <a class="d-none d-sm-inline-block" href=" ./src/img/NewMoroz.jpg" target="_blank">
+                    <img src=" ./src/img/NewMorozSM.png" width="58" height="75" />
+                  </a>
+                </th>
+                <th>2000 грн</th>
+                <th>3000 грн</th>
+                <th>2500 грн + проїзд</th>
+                <th>3000 грн+ проїзд</th>
+              </tr>
+            </table>
+          </div>
 
-              <div class="col-9">
-                <p>
-                  050-344-53-23
-                </p>
-              </div>
+          <div class="row mb-1 mb-md-5">
+            <p>*При великих проектах (від 10 робочих годин) – <span class="contact__price">500 грн/година</span></p>
+            <p>
+              З приводу вуличних вистав, танцювальних номерів на ходулях, участі в різноманітних проектах та з усіх
+              інших питань звертайтесь:
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-              <div class="col-3 text-right pr-5 mb-3">
-                <img src=" ./src/icon/lifecell.png" />
-              </div>
+    <!-- Contacts -->
+    <div class="container">
+      <div class="row contact__info contact ml-lg-5">
+        <div class="col-12 col-lg-8 offset-lg-3">
+          <div class="row">
+            <div class="col-3 col-md-4 mb-md-3">
+              <a href="http://www.facebook.com/alex.svietliakov" target="_blank">
+                <img class="contact__icon" src="./src/icon/facebook.png" alt="facebook" />
+              </a>
+              <a href="https://www.instagram.com/stiltwalkers/" target="_blank">
+                <img class="contact__icon" src="./src/icon/insta.png" alt="insta" />
+              </a>
+              <a class="d-none d-md-inline-block" href="https://www.youtube.com/channel/UCJecQvoljq84E2bJCNoh5RQ">
+                <img class="contact__icon" src="./src/icon/youtube.png" alt="youtube" />
+              </a>
+            </div>
+            <div class="col-8 contact__logo-block">
+              <img class="contact__logo-block-img d-none d-xl-block" src="./src/icon/LOGOTYP.jpg" alt="Logo" />
+              <p class="contact__name">Олександр Свєтляков</p>
+            </div>
 
-              <div class="col-9">
-                <p>
-                  063-954-2-953
-                </p>
-              </div>
+            <div class="col-3 col-md-4 mb-md-3">
+              <img class="contact__icon" src=" ./src/icon/viber.png" />
+              <img class="contact__icon" src=" ./src/icon/whatsapp.png" />
+              <img class="contact__icon d-none d-md-inline-block" src=" ./src/icon/vodafone.png" />
+            </div>
 
-              <div class="col-3 text-right pr-5 mb-3">
-                <img src=" ./src/icon/mailru.png" />
-              </div>
-              <div class="col-9">
-                <p>
-                  alexlighty@ukr.net
-                </p>
-              </div>
+            <div class="col-8 ">
+              <p>
+                050-344-53-23
+              </p>
+            </div>
 
-              <div class="col-3 text-right pr-5 mb-3">
-                <img src=" ./src/icon/GMail.png" />
-              </div>
-              <div class="col-9">
-                <p>
-                  stiltwalkerskyiv@gmail.com
-                </p>
-              </div>
+            <div class="col-3 text-right pr-5 mb-md-3">
+              <img class="contact__icon" src=" ./src/icon/lifecell.png" />
+            </div>
 
-              <div class="col-3 text-right pr-5 mb-3">
-                <img src=" ./src/icon/skype.png" />
-              </div>
-              <div class="col-9">
-                <p>
-                  alexlightye
-                </p>
-              </div>
+            <div class="offset-md-1 col-8">
+              <p>
+                063-954-2-953
+              </p>
+            </div>
+
+            <div class="col-3 text-right pr-5 mb-md-3">
+              <img class="contact__icon" src=" ./src/icon/mailru.png" />
+            </div>
+            <div class="offset-md-1 col-8">
+              <p>
+                alexlighty@ukr.net
+              </p>
+            </div>
+
+            <div class="col-3 text-right pr-5 mb-md-3">
+              <img class="contact__icon" src=" ./src/icon/GMail.png" />
+            </div>
+            <div class="offset-md-1 col-8">
+              <p>
+                stiltwalkerskyiv@gmail.com
+              </p>
+            </div>
+
+            <div class="col-3 text-right pr-5 mb-md-3">
+              <img class="contact__icon" src=" ./src/icon/skype.png" />
+            </div>
+            <div class="offset-md-1 col-8">
+              <p>
+                alexlightye
+              </p>
             </div>
           </div>
         </div>
       </div>
-
-      <footer>
-        <div class="offset-9 main my-3">
-          <small>© вуличний театр "Highlights ", 2011-2018</small>
-        </div>
-      </footer>
     </div>
+
+    <div class="text-right main mr-5 my-3">
+      <small>© вуличний театр "Highlights ", 2011-2018</small>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(function() {
+        "use strict";
+        $('[data-toggle="offcanvas"]').on("click", function() {
+          $(".offcanvas-collapse").addClass("open");
+          $("body").addClass("offcanvas-open");
+        });
+        $('[data-toggle="offcanvas-close"]').on("click", function() {
+          $(".offcanvas-collapse").removeClass("open");
+          $("body").removeClass("offcanvas-open");
+        });
+      });
+    </script>
   </body>
 </html>
