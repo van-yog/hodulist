@@ -103,7 +103,7 @@
 }
 
 /* Menu and style navbar for mobile */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navigation-visibility-mobile {
     display: block;
     z-index: 1;
