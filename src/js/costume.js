@@ -3,6 +3,20 @@
 let pathImg = "./src/img/";
 
 let mobile = document.querySelector("#mobile");
+let selectCostume = document.createElement("select");
+
+let openMenu = document.querySelector("#openMenu");
+let closeMenu = document.querySelector("#closeMenu");
+
+openMenu.addEventListener("click", () => {
+  let select = document.querySelector("select");
+  select.classList.add("z-index-10");
+});
+
+closeMenu.addEventListener("click", () => {
+  let select = document.querySelector("select");
+  select.classList.remove("z-index-10");
+});
 
 let costume = [];
 
@@ -181,7 +195,7 @@ costume.push({
 
 costume.push({
   name: "Новорічні костюми",
-  imgs: ["NewMoroz", "MorozSnigurka2SM", "NewMoroz2", "santa", "angelok", "jalynka", "birds1"],
+  imgs: ["NewMoroz", "MorozSnigurka2", "NewMoroz2", "santa", "angelok", "jalynka", "birds1", "MorozSnigurka"],
   alts: [],
 });
 
@@ -195,16 +209,25 @@ for (let i = 0; i < costume.length; i++) {
   createSlider(costume[i], i);
 }
 
-createSelect(costume);
+selectCostume.addEventListener("change", (ev) => {
+  let value = ev.target.value;
+  console.dir(value);
+  location.href = value;
+});
 
-function createSelect(costume) {
-  let select = document.createElement("select");
+createSelect(costume, selectCostume);
 
-  costume.forEach((element) => {
+function createSelect(costume, select) {
+  select.classList.add("offset-3", "col-8", "position-fixed", "p-2", "rounded", "bg-light", "select-costume", "my-2");
+
+  for (let i = 0; i < costume.length; i++) {
     let option = document.createElement("option");
-    option.innerText = element.name;
+    option.innerText = costume[i].name;
+    option.setAttribute("value", `#costume${i}`);
+
     select.append(option);
-  });
+  }
+
   mobile.prepend(select);
 }
 
@@ -217,12 +240,12 @@ function createSlider(obj, id) {
   let costumeId = `costume${id}`;
 
   let div = document.createElement("div");
-  div.classList.add("col-10", "offset-1", "mb-5", "main", "text-center");
+  div.classList.add("col-12", "px-4", "main", "text-center");
   let div1 = document.createElement("div");
 
-  div1.classList.add("carousel", "slide");
+  div1.classList.add("carousel", "slide", "pt-5");
   div1.setAttribute("id", costumeId);
-  div1.setAttribute("data-ride", "carousel");
+  div1.setAttribute("data-ride", "false");
   costumeId = "#" + costumeId;
 
   let h5 = document.createElement("h5");

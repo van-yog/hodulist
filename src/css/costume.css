@@ -1,0 +1,13 @@
+.select-costume {
+  top: 1px;
+  height: 40px;
+  z-index: 100;
+}
+
+#openMenu {
+  z-index: 110;
+}
+
+.z-index-10 {
+  z-index: 10;
+}

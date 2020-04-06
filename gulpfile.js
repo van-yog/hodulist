@@ -23,7 +23,7 @@ gulp.task("icon", function () {
 });
 
 gulp.task("js", function () {
-  return gulp.src("./src/js/costume.js").pipe(gulp.dest("build/src/js"));
+  return gulp.src("./src/js/*.js").pipe(gulp.dest("build/src/js"));
 });
 
-gulp.task("build", gulp.series("css", "html", "icon", "img"));
+gulp.task("build", gulp.series("css", "html", "icon", "img", "js"));

@@ -1,0 +1,57 @@
+.nav__index-img {
+  background-image: url("../icon/nav_index_en.png");
+  height: 30px;
+  width: 151px;
+}
+
+.nav__spectacle-img {
+  background-image: url("../icon/nav_spectacle_en.png");
+  height: 28px;
+  width: 150px;
+}
+
+.nav__performance-img {
+  background-image: url("../icon/nav_performance_en.png");
+  height: 25px;
+  width: 149px;
+}
+
+.nav__costume-img {
+  background-image: url("../icon/nav_costume_en.png");
+  height: 30px;
+  width: 149px;
+}
+
+.nav__contact-img {
+  background-image: url("../icon/nav_contact_en.png");
+  height: 34px;
+  width: 140px;
+}
+
+.nav__index-img:hover {
+  background-image: url("../icon/nav_index_en_bg.png");
+}
+
+.nav__spectacle-img:hover {
+  background-image: url("../icon/nav_spectacle_en_bg.png");
+}
+
+.nav__performance-img:hover {
+  background-image: url("../icon/nav_performance_en_bg.png");
+}
+
+.nav__costume-img:hover {
+  background-image: url("../icon/nav_costume_en_bg.png");
+}
+
+.nav__contact-img:hover {
+  background-image: url("../icon/nav_contact_en_bg.png");
+}
+
+.contact__logo-block-img {
+  left: 600px;
+}
+
+.main__vimeo {
+  margin-bottom: 0;
+}
