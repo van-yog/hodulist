@@ -1,0 +1,151 @@
+.nav {
+  position: relative;
+}
+
+#nav__index {
+  position: absolute;
+  left: 58px;
+  top: 138px;
+}
+
+#nav__spectacle {
+  position: absolute;
+  left: 60px;
+  top: 170px;
+}
+
+#nav__performance {
+  position: absolute;
+  left: 60px;
+  top: 199px;
+}
+
+#nav__costume {
+  position: absolute;
+  left: 60px;
+  top: 224px;
+}
+
+#nav__contact {
+  position: absolute;
+  left: 60px;
+  top: 250px;
+}
+
+.nav__contacts {
+  width: 228px;
+}
+
+.nav__index-img {
+  background-image: url("../icon/nav_index_ua.png");
+  height: 30px;
+  width: 151px;
+}
+
+.nav__spectacle-img {
+  background-image: url("../icon/nav_spectacle_ua.png");
+  height: 28px;
+  width: 150px;
+}
+
+.nav__performance-img {
+  background-image: url("../icon/nav_performance_ua.png");
+  height: 25px;
+  width: 149px;
+}
+
+.nav__costume-img {
+  background-image: url("../icon/nav_costume_ua.png");
+  height: 30px;
+  width: 149px;
+}
+
+.nav__contact-img {
+  background-image: url("../icon/nav_contact_ua.png");
+  height: 34px;
+  width: 140px;
+}
+
+.nav__index-img:hover {
+  background-image: url("../icon/nav_index_ua_bg.png");
+}
+
+.nav__spectacle-img:hover {
+  background-image: url("../icon/nav_spectacle_ua_bg.png");
+}
+
+.nav__performance-img:hover {
+  background-image: url("../icon/nav_performance_ua_bg.png");
+}
+
+.nav__costume-img:hover {
+  background-image: url("../icon/nav_costume_ua_bg.png");
+}
+
+.nav__contact-img:hover {
+  background-image: url("../icon/nav_contact_ua_bg.png");
+}
+
+/* Mobile navigation */
+.mobile__bg-style {
+  border-right: 2px solid silver;
+  border-bottom: 2px solid silver;
+  overflow: hidden;
+  background-image: url("../img/bg_photo.jpg");
+}
+
+.mobile__menu-position {
+  top: -25px;
+}
+/* Header and navigation */
+.navigation-visibility-mobile {
+  display: none;
+}
+
+/* Menu and style navbar for mobile */
+@media (max-width: 992px) {
+  .navigation-visibility-mobile {
+    display: block;
+    z-index: 1;
+  }
+  .offcanvas-collapse {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 240px;
+    padding-top: 3rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #e0e0e0;
+    transition: visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+
+  .offcanvas-collapse.open {
+    visibility: visible;
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+  }
+
+  .offcanvas-close {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.3);
+    border: none;
+    -webkit-appearance: button;
+    background-color: transparent;
+    right: 0;
+    top: 0;
+    padding: 0 1.5rem;
+  }
+
+  .offcanvas-open {
+    overflow: hidden;
+  }
+}
