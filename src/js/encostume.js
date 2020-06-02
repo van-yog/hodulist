@@ -22,7 +22,7 @@ let costume = [];
 
 // costume.push({
 //   name: "Масляна",
-//   imgs: ["jokers", "impBlack", "gopak4", "ukrainians", "jokers2"],
+//   imgs: ["jokers", "imp_black", "gopak_4", "ukrainians", "jokers_2"],
 //
 // });
 
@@ -33,88 +33,88 @@ costume.push({
 
 costume.push({
   name: "Rio de Janeiro carnival costumes",
-  imgs: ["sambaRed", "samba2", "sambaOrange"],
+  imgs: ["sambaRed", "samba_2", "samba_orange"],
 });
 
 costume.push({
   name: "Robots Transformers ALX-16 and ALX-17",
-  imgs: ["robot1", "robot3", "robots5", "robot2", "robots4"],
+  imgs: ["robot_1", "robot3", "robots_5", "robot_2", "robots_4"],
 });
 
 costume.push({
   name: "Chess",
-  imgs: ["chess1", "chess2", "chess3", "chess4"],
+  imgs: ["chess_1", "chess_2", "chess_3", "chess_4"],
 });
 
 costume.push({
   name: "Gods of Egypt",
-  imgs: ["egyptgods1", "Egypt2", "egypt3", "egypt1"],
+  imgs: ["egypt_gods_1", "Egypt2", "egypt_3", "egypt_1"],
 });
 
 costume.push({
   name: "Buffons",
-  imgs: ["jokers", "joker1", "Skomoroh5", "joker2", "Skomoroh6", "jokers2", "joker3"],
+  imgs: ["jokers", "joker_1", "skomoroh_5", "joker_2", "skomoroh_6", "jokers_2", "joker_3"],
 });
 
 costume.push({
   name: "White Birds",
-  imgs: ["bird2", "bird4", "birds1"],
+  imgs: ["bird_2", "bird_4", "birds_1"],
 });
 
 costume.push({
   name: "Three-heads Dragon Zmey Gorynych, flying Baba Yaga and Hut on hen's legs",
-  imgs: ["gorynych", "izba1", "izba2", "babayaga", "izba3"],
+  imgs: ["gorynych", "izba_1", "izba_2", "baba_yaga", "izba_3"],
 });
 
 costume.push({
   name: "Light Angels",
-  imgs: ["lightAngels3", "lightangelsheart", "lightAngels1", "lightAngels2", "lightangels5"],
+  imgs: ["lightAngels3", "light_angels_heart", "light_angels_1", "lightAngels2", "light_angels_5"],
 });
 
 costume.push({
   name: "Riders",
-  imgs: ["cowboy2", "ukrman3", "cowboy1", "riders"],
+  imgs: ["cowboy_2", "ukr_man_3", "cowboy_1", "riders"],
 });
 
 costume.push({
   name: "Angels",
-  imgs: ["angelBlueWhite", "angelSilver", "angelBlackRed", "angelViolet"],
+  imgs: ["angel_blue_white", "angel_silver", "angel_black_red", "angel_violet"],
 });
 
 costume.push({
   name: "Butterflies",
-  imgs: ["bflies3", "bflies1", "bflies5", "bflies4", "bflyGreen"],
+  imgs: ["bflies_3", "bflies_1", "bflies_5", "bflies_4", "bfly_green"],
 });
 
 costume.push({
   name: "№1, №2, №3",
-  imgs: ["number1", "number2", "number3", "number1and2"],
+  imgs: ["number_1", "number_2", "number_3", "number_1_and_2"],
 });
 
 costume.push({
   name: "Ukrainians",
   imgs: [
     "ukrainians",
-    "ukrman3",
+    "ukr_man_3",
     "ukrman2",
-    "ukrwoman1",
-    "ukrwoman2",
-    "ukrwoman4",
-    "ukrwoman3",
-    "ukrlight",
-    "ukrwomen",
-    "ukrman1",
+    "ukr_woman_1",
+    "ukr_woman_2",
+    "ukr_woman_4",
+    "ukr_woman_3",
+    "ukr_light",
+    "ukr_women",
+    "ukr_man_1",
   ],
 });
 
 costume.push({
   name: "Clowns",
-  imgs: ["clownPink", "clowns5", "clowns6", "clownYellow"],
+  imgs: ["clown_pink", "clowns_5", "clowns_6", "clown_yellow"],
 });
 
 costume.push({
   name: "Avatars",
-  imgs: ["Avatar1", "avatar5", "Avatar2", "Avatar3"],
+  imgs: ["avatar_1", "avatar_5", "avatar_2", "Avatar3"],
 });
 
 costume.push({
@@ -124,62 +124,62 @@ costume.push({
 
 costume.push({
   name: "Shopping ladies",
-  imgs: ["shopping4", "shopping6", "shopping2", "shopping5", "shopping3"],
+  imgs: ["shopping_4", "shopping_6", "shopping_2", "shopping_5", "shopping_3"],
 });
 
 costume.push({
   name: "Can Can",
-  imgs: ["cancan", "Cancan2", "cancan3"],
+  imgs: ["cancan", "Cancan2", "cancan_3"],
 });
 
 costume.push({
   name: "Ladies",
-  imgs: ["damaViolet", "damaPink", "damaGreen", "damaRed"],
+  imgs: ["dama_violet", "dama_pink", "dama_green", "dama_red"],
 });
 
 costume.push({
   name: "Gentlemen",
-  imgs: ["gentleman1", "mushketeer2", "mushketeer1"],
+  imgs: ["gentleman_1", "mushketeer_2", "mushketeer_1"],
 });
 
 costume.push({
   name: "Sailors",
-  imgs: ["sailor1", "sailor2", "sailor3", "sailor4"],
+  imgs: ["sailor_1", "sailor_2", "sailor_3", "sailor_4"],
 });
 
 costume.push({
   name: "Euro-2012",
-  imgs: ["euroEngland", "euro", "euroSpain"],
+  imgs: ["euro_england", "euro", "euro_spain"],
 });
 
 costume.push({
   name: "Spanish costumes",
-  imgs: ["spanishWoman2", "spanishMan", "spanishWoman1", "spanishAll"],
+  imgs: ["spanish_woman_2", "spanish_man", "spanish_woman_1", "spanish_all"],
 });
 
 costume.push({
   name: "Russians",
-  imgs: ["russianRed", "russiansAll", "russianWhite"],
+  imgs: ["russian_red", "russians_all", "russian_white"],
 });
 
 costume.push({
   name: "Orient costumes",
-  imgs: ["indiaViolet", "india", "indiaRed", "hottab", "orientprincess"],
+  imgs: ["india_violet", "india", "india_red", "hottab", "orient_princess"],
 });
 
 costume.push({
   name: "Chinese costumes",
-  imgs: ["chinaDragon", "chinaPink", "chinaWhite", "chinaGrey"],
+  imgs: ["china_dragon", "china_pink", "china_white", "china_grey"],
 });
 
 costume.push({
   name: "New Year and Christmas costumes",
-  imgs: ["NewMoroz", "MorozSnigurka2", "NewMoroz2", "santa", "angelok", "jalynka", "birds1", "MorozSnigurka"],
+  imgs: ["NewMoroz", "moroz_snigurka_2", "new_moroz_2", "santa", "angelok", "jalynka", "birds_1", "moroz_snigurka"],
 });
 
 costume.push({
   name: "Halloween",
-  imgs: ["pumpkin4", "BlackLady", "babayaga", "koko1", "gorynych", "pumpkin4", "VampKing1", "izba1"],
+  imgs: ["pumpkin_4", "black_lady", "baba_yaga", "koko_1", "gorynych", "pumpkin_4", "vamp_king_1", "izba_1"],
 });
 
 for (let i = 0; i < costume.length; i++) {

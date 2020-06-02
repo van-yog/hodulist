@@ -42,6 +42,11 @@
   top: 50px;
 }
 
+.border-silver-contact img {
+  border: 1px solid silver;
+  box-shadow: 0px 0px 5px 2px silver;
+}
+
 @media (max-width: 576px) {
   .contact__name {
     font-size: 18px;
