@@ -69,8 +69,8 @@
     <!-- Header -->
     @@include("./templates/header.html")
 
-    <div class="container d-none d-lg-block">
-      <div class="row mb-5">
+    <div class="container-fluid py-4 px-5 d-none d-lg-block">
+      <div class="row mb-5 px-4">
         <!-- Navigation -->
         @@include("./templates/desktop-navigation.html")
 
@@ -163,21 +163,22 @@
 
     <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".swiper-container", {
-        slidesPerView: 1,
-        autoHeight: true,
-        preloadImages: false,
-        // Enable lazy loading
-        lazy: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
+      let swiper;
+      setTimeout(() => {
+        swiper = new Swiper(".swiper-container", {
+          slidesPerView: 1,
+          autoHeight: true,
+          preloadImages: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      }, 200);
     </script>
   </body>
 </html>

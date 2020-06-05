@@ -20,7 +20,24 @@ body {
   border: 1px solid silver;
   box-shadow: 0px 0px 8px 4px silver;
 }
+
+.border-silver-img img:hover {
+  box-shadow: 0px 0px 16px 8px silver;
+  transition: all 1s ease-out;
+}
+
 .border-silver {
   border: 1px solid silver;
   box-shadow: 0px 0px 8px 4px silver;
 }
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;

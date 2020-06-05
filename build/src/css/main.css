@@ -57,10 +57,6 @@
   box-shadow: 0px 0px 18px 5px silver;
 }
 
-.swiper-wrapper {
-  min-height: 200px;
-}
-
 @media (max-width: 992px) {
   .main__youtube {
     width: 550px;
