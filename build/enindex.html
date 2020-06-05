@@ -21,6 +21,7 @@
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
   crossorigin="anonymous"
 />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <link rel="stylesheet" href="./src/css/style.css" />
 <link rel="stylesheet" href="./src/css/enstyle.css" />
 <link rel="shortcut icon" href="./src/icon/favicon.ico" type="image/x-icon" />
@@ -81,7 +82,7 @@
 
 
     <!-- Header -->
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="fade-right" data-aos-duration="800">
   <div class="row mb-1 mb-sm-4">
     <div class="col-12 text-center d-flex flex-wrap justify-content-center">
       <img class="header__img order-1 ml-4 m-sm-0" src="./src/icon/enteatr2.gif" alt="Вуличний" />
@@ -97,7 +98,7 @@
 </div>
 
 <!-- Social networks and languages with flag icons -->
-<div class="container">
+<div class="container" data-aos="fade-left" data-aos-duration="800">
   <div class="row">
     <div class="col-12 d-flex justify-content-between mb-md-2">
       <div class="mx-md-5 pl-md-4">
@@ -172,7 +173,7 @@
 
         <!-- First block of content -->
         <div class="col-12 col-md-8 ml-md-5 ml-lg-0 pr-0 pr-md-4 main">
-          <div>
+          <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
             <h1 class="text-center mt-md-2 mb-md-2">
               <span class="main__header">Welcome!</span>
             </h1>
@@ -182,19 +183,21 @@
             </p>
           </div>
 
-          <div>
+          <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
             <img class="w-100 px-md-3 mb-md-2" src="./src/img/collage.png" alt='Вуличний театр "Хайлайтс"' />
           </div>
 
-          <p class="text-justify pr-3">
-            Using of bright costumes and stilts does actors at the attention centre of any event, big or small one.
-          </p>
+          <div class="text-justify pr-3" data-aos="fade-up" data-aos-duration="600">
+            <p class="text-justify pr-3">
+              Using of bright costumes and stilts does actors at the attention centre of any event, big or small one.
+            </p>
 
-          <p class="text-justify pr-3">
-            So, if will see in the street something interesting, do not hesitate to smile.
-          </p>
+            <p class="text-justify pr-3">
+              So, if will see in the street something interesting, do not hesitate to smile.
+            </p>
 
-          <p class="text-justify pr-3">See you on the streets in your town!</p>
+            <p class="text-justify pr-3">See you on the streets in your town!</p>
+          </div>
         </div>
       </div>
     </div>
@@ -258,6 +261,8 @@
             src="https://www.youtube.com/embed/nMewFGwrMAU?rel=0&amp;showinfo=0"
             frameborder="0"
             allowfullscreen
+            data-aos="fade-up-left"
+            data-aos-duration="600"
           >
           </iframe>
 
@@ -266,6 +271,8 @@
             src="https://www.youtube.com/embed/BVR_RI-ddiA?rel=0&amp;showinfo=0"
             frameborder="0"
             allowfullscreen
+            data-aos="fade-up-right"
+            data-aos-duration="600"
           >
           </iframe>
 
@@ -275,6 +282,8 @@
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen
+            data-aos="fade-up-left"
+            data-aos-duration="600"
           >
           </iframe>
 
@@ -283,6 +292,8 @@
             src="https://www.youtube.com/embed/kAC5KNDoymM?rel=0&amp;showinfo=0"
             frameborder="0"
             allowfullscreen
+            data-aos="fade-up-right"
+            data-aos-duration="600"
           >
           </iframe>
         </div>
@@ -312,6 +323,11 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"
 ></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <script>
   $(function () {

@@ -25,9 +25,11 @@
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
   crossorigin="anonymous"
 />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 <link rel="stylesheet" href="./src/css/style.css" />
 <link rel="shortcut icon" href="./src/icon/favicon.ico" type="image/x-icon" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
   </head>
 
   <body>
@@ -83,7 +85,7 @@
 
 
     <!-- Header -->
-    <div class="container-fluid">
+    <div class="container-fluid" data-aos="fade-right" data-aos-duration="800">
   <div class="row mb-1 mb-sm-4">
     <div class="col-12 text-center d-flex flex-wrap justify-content-center">
       <img class="header__img order-1 ml-4 m-sm-0" src="./src/icon/teatr2ukr.gif" alt="Вуличний" />
@@ -99,7 +101,7 @@
 </div>
 
 <!-- Social networks and languages with flag icons -->
-<div class="container">
+<div class="container" data-aos="fade-left" data-aos-duration="800">
   <div class="row">
     <div class="col-12 d-flex justify-content-between mb-md-2">
       <div class="mx-md-5 pl-md-4">
@@ -133,7 +135,7 @@
         <div class="col-3 ml-lg-5 d-none d-xl-block">
   <nav>
     <div class="nav ml-lg-3">
-      <div>
+      <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
         <img class="d-block mb-5" src="./src/icon/lamp.png" alt="Ліхтар" />
         <img class="nav__contacts pr-2" src="./src/icon/contacts.png" alt="Контакти" />
       </div>
@@ -174,7 +176,7 @@
 
         <!-- First block of content -->
         <div class="col-12 col-md-8 ml-md-5 ml-lg-0 pr-0 pr-md-4 main">
-          <div>
+          <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
             <h1 class="text-center mt-md-2 mb-md-2">
               <span class="main__header">Вітаємо Вас!</span>
             </h1>
@@ -185,16 +187,16 @@
             </p>
           </div>
 
-          <div>
+          <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
             <img class="w-100 px-md-3 mb-md-2" src="./src/img/collage.png" alt='Вуличний театр "Хайлайтс"' />
           </div>
 
-          <p class="text-justify pr-3">
+          <p class="text-justify pr-3" data-aos="fade-up" data-aos-duration="600">
             Високі ходулі та яскраві оригінальні костюми завжди роблять артистів головними фігурами будь-якого
             святкування. До них завжди прикута увага публіки.
           </p>
 
-          <p class="text-justify pr-3">
+          <p class="text-justify pr-3" data-aos="fade-up" data-aos-duration="600">
             Тому, якщо побачите щось цікаве і незвичне - не соромтесь посміхнутись. До зустрічі на вулицях Вашого
             міста!!!
           </p>
@@ -261,6 +263,8 @@
             src="https://www.youtube.com/embed/nMewFGwrMAU?rel=0&amp;showinfo=0"
             frameborder="0"
             allowfullscreen
+            data-aos="fade-up-left"
+            data-aos-duration="600"
           >
           </iframe>
 
@@ -269,6 +273,8 @@
             src="https://www.youtube.com/embed/BVR_RI-ddiA?rel=0&amp;showinfo=0"
             frameborder="0"
             allowfullscreen
+            data-aos="fade-up-right"
+            data-aos-duration="600"
           >
           </iframe>
 
@@ -278,6 +284,8 @@
             frameborder="0"
             allow="autoplay; encrypted-media"
             allowfullscreen
+            data-aos="fade-up-left"
+            data-aos-duration="600"
           >
           </iframe>
 
@@ -286,6 +294,8 @@
             src="https://www.youtube.com/embed/kAC5KNDoymM?rel=0&amp;showinfo=0"
             frameborder="0"
             allowfullscreen
+            data-aos="fade-up-right"
+            data-aos-duration="600"
           >
           </iframe>
         </div>
@@ -315,6 +325,11 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"
 ></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 <script>
   $(function () {

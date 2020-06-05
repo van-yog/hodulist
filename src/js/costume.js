@@ -274,14 +274,26 @@ function createSlider(obj, id) {
     let slide = document.createElement("div");
     slide.className = "swiper-slide";
 
-    let img = document.createElement("img");
-    img.setAttribute("data-src", "./src/img/" + obj.imgs[i] + ".jpg");
-    img.className = "img-fluid swiper-lazy";
+    let classImg = !i ? "img-fluid" : "img-fluid swiper-lazy";
+    let picture = document.createElement("picture");
+    picture.innerHTML = `<source type="image/webp" srcset="./src/img/webp/${obj.imgs[i]}.webp">
+    <img data-src="./src/img/${obj.imgs[i]}.jpg" class="${classImg}" />
+    </source>`;
+    // let source = document.createElement("source");
+    // source.setAttribute("type", "image/webp");
+    // source.setAttribute("srcset", "./src/img/" + obj.imgs[i] + ".webp");
+
+    // let img = document.createElement("img");
+    // img.setAttribute("data-src", "./src/img/" + obj.imgs[i] + ".jpg");
+    // img.className = "img-fluid swiper-lazy";
+
+    // picture.append(source);
+    // picture.append(img);
 
     let lazy = document.createElement("div");
-    lazy.className = "swiper-lazy-preloader";
+    if (i) lazy.className = "swiper-lazy-preloader";
 
-    slide.append(img);
+    slide.append(picture);
     slide.append(lazy);
     div1.append(slide);
   }
@@ -304,91 +316,91 @@ function createSlider(obj, id) {
   mobile.append(div);
 }
 
-let costumeDesktop = document.querySelector("#costumeDesktop");
-let costumeDesktop2 = document.querySelector("#costumeDesktop2");
-let place = costumeDesktop;
+// let costumeDesktop = document.querySelector("#costumeDesktop");
+// let costumeDesktop2 = document.querySelector("#costumeDesktop2");
+// let place = costumeDesktop;
 
-for (let i = 0; i < costume.length; i++) {
-  let row = document.createElement("div");
-  place = i > 1 ? costumeDesktop2 : costumeDesktop;
-  row.className =
-    i > 1 ? "row d-flex justify-content-around text-center mb-5" : "row d-flex justify-content-around text-center mb-5";
+// for (let i = 0; i < costume.length; i++) {
+//   let row = document.createElement("div");
+//   place = i > 1 ? costumeDesktop2 : costumeDesktop;
+//   row.className =
+//     i > 1 ? "row d-flex justify-content-around text-center mb-5" : "row d-flex justify-content-around text-center mb-5";
 
-  let h2 = document.createElement("h2");
-  h2.innerText = costume[i].name;
-  h2.classList.add("text-center", "main__header", "mb-3");
-  place.append(h2);
+//   let h2 = document.createElement("h2");
+//   h2.innerText = costume[i].name;
+//   h2.classList.add("text-center", "main__header", "mb-3");
+//   place.append(h2);
 
-  if (costume[i].imgs.length === 5) {
-    // create left
-    let div1 = document.createElement("div");
-    div1.className = "col-3 my-auto";
+//   if (costume[i].imgs.length === 5) {
+//     // create left
+//     let div1 = document.createElement("div");
+//     div1.className = "col-3 my-auto";
 
-    let name1 = costume[i].imgs[0];
-    let img1 = new Image();
-    img1.src = `./src/img/${name1}.jpg`;
-    img1.className = img1.height > img1.width ? "img-vertical" : "img-horizontal";
+//     let name1 = costume[i].imgs[0];
+//     let img1 = new Image();
+//     img1.src = `./src/img/${name1}.jpg`;
+//     img1.className = img1.height > img1.width ? "img-vertical" : "img-horizontal";
 
-    div1.append(img1);
-    //create center
-    let div2 = document.createElement("div");
-    div2.className = "col-6";
+//     div1.append(img1);
+//     //create center
+//     let div2 = document.createElement("div");
+//     div2.className = "col-6";
 
-    let div2_top = document.createElement("div");
-    // foto 2
-    let name2 = costume[i].imgs[1];
-    let img2 = new Image();
-    img2.src = `./src/img/${name2}.jpg`;
-    img2.className = img2.height > img2.width ? "img-vertical" : "img-horizontal";
-    // foto 3
-    let name3 = costume[i].imgs[2];
-    let img3 = new Image();
-    img3.src = `./src/img/${name3}.jpg`;
-    img3.className = img3.height > img3.width ? "img-vertical" : "img-horizontal";
+//     let div2_top = document.createElement("div");
+//     // foto 2
+//     let name2 = costume[i].imgs[1];
+//     let img2 = new Image();
+//     img2.src = `./src/img/${name2}.jpg`;
+//     img2.className = img2.height > img2.width ? "img-vertical" : "img-horizontal";
+//     // foto 3
+//     let name3 = costume[i].imgs[2];
+//     let img3 = new Image();
+//     img3.src = `./src/img/${name3}.jpg`;
+//     img3.className = img3.height > img3.width ? "img-vertical" : "img-horizontal";
 
-    div2_top.append(img2);
-    div2_top.append(img3);
-    // foto 5
-    let name5 = costume[i].imgs[4];
-    let img5 = new Image();
-    img5.src = `./src/img/${name5}.jpg`;
-    img5.className = img5.height > img5.width ? "img-vertical" : "img-horizontal";
+//     div2_top.append(img2);
+//     div2_top.append(img3);
+//     // foto 5
+//     let name5 = costume[i].imgs[4];
+//     let img5 = new Image();
+//     img5.src = `./src/img/${name5}.jpg`;
+//     img5.className = img5.height > img5.width ? "img-vertical" : "img-horizontal";
 
-    div2.append(div2_top);
-    div2.append(img5);
+//     div2.append(div2_top);
+//     div2.append(img5);
 
-    // create right
-    let div3 = document.createElement("div");
-    div3.className = "col-3 my-auto";
-    // foto 4
-    let name4 = costume[i].imgs[3];
-    let img4 = new Image();
-    img4.src = `./src/img/${name4}.jpg`;
-    img4.className = img4.height > img4.width ? "img-vertical" : "img-horizontal";
+//     // create right
+//     let div3 = document.createElement("div");
+//     div3.className = "col-3 my-auto";
+//     // foto 4
+//     let name4 = costume[i].imgs[3];
+//     let img4 = new Image();
+//     img4.src = `./src/img/${name4}.jpg`;
+//     img4.className = img4.height > img4.width ? "img-vertical" : "img-horizontal";
 
-    div3.append(img4);
+//     div3.append(img4);
 
-    row.append(div1);
-    row.append(div2);
-    row.append(div3);
+//     row.append(div1);
+//     row.append(div2);
+//     row.append(div3);
 
-    place.append(row);
-    continue;
-  }
+//     place.append(row);
+//     continue;
+//   }
 
-  for (let k = 0; k < costume[i].imgs.length; k++) {
-    let a = document.createElement("a");
-    a.className = "my-auto";
+//   for (let k = 0; k < costume[i].imgs.length; k++) {
+//     let a = document.createElement("a");
+//     a.className = "my-auto";
 
-    let name = costume[i].imgs[k];
-    let img = new Image();
-    img.src = `./src/img/${name}.jpg`;
+//     let name = costume[i].imgs[k];
+//     let img = new Image();
+//     img.src = `./src/img/${name}.jpg`;
 
-    img.className = img.height > img.width ? "img-vertical" : "img-horizontal";
+//     img.className = img.height > img.width ? "img-vertical" : "img-horizontal";
 
-    a.append(img);
-    row.append(a);
-  }
+//     a.append(img);
+//     row.append(a);
+//   }
 
-  place.append(row);
-}
+//   place.append(row);
+// }

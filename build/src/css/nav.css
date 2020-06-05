@@ -6,30 +6,49 @@
   position: absolute;
   left: 58px;
   top: 138px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 1s forwards;
 }
 
 #nav__spectacle {
   position: absolute;
   left: 60px;
   top: 170px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 1.2s forwards;
 }
 
 #nav__performance {
   position: absolute;
   left: 60px;
   top: 199px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 1.4s forwards;
 }
 
 #nav__costume {
   position: absolute;
   left: 60px;
   top: 224px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 1.6s forwards;
 }
 
 #nav__contact {
   position: absolute;
   left: 60px;
   top: 250px;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out 1.8s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .nav__contacts {
@@ -38,7 +57,7 @@
 
 .nav__index-img {
   background-image: url("../icon/nav_index_ua.png");
-  height: 30px;
+  height: 35px;
   width: 151px;
 }
 

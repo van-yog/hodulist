@@ -30,12 +30,23 @@
   margin-bottom: 40px;
 }
 
+.main__youtube:hover {
+  box-shadow: 0px 0px 28px 10px silver;
+  transition: all 1s ease-out;
+}
+
 .main__vimeo {
   width: 640px;
   height: 360px;
   margin-bottom: 40px;
   border: 1px solid silver;
   box-shadow: 0px 0px 18px 5px silver;
+  transition: all 1s ease-out;
+}
+
+.main__vimeo:hover {
+  box-shadow: 0px 0px 28px 10px silver;
+  transition: all 1s ease-out;
 }
 
 .main__video {
@@ -44,6 +55,10 @@
   margin-bottom: 40px;
   border: 1px solid silver;
   box-shadow: 0px 0px 18px 5px silver;
+}
+
+.swiper-wrapper {
+  min-height: 200px;
 }
 
 @media (max-width: 992px) {

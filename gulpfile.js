@@ -1,10 +1,84 @@
 let gulp = require("gulp");
 let clean = require("gulp-clean");
-let imagemin = require("gulp-imagemin");
 let fileinclude = require("gulp-file-include");
+
+let imagemin = require("gulp-imagemin");
+let webp = require("imagemin-webp");
+let extReplace = require("gulp-ext-replace");
+let rename = require("gulp-rename");
 
 let browserSync = require("browser-sync").create();
 let reload = browserSync.reload;
+
+let resizer = require("gulp-images-resizer");
+
+gulp.task("resizeWebP", function () {
+  return gulp
+    .src("./src/img/*.*")
+    .pipe(
+      resizer({
+        format: "jpg",
+        width: 350,
+      })
+    )
+    .pipe(
+      imagemin([
+        webp({
+          quality: 75,
+        }),
+      ])
+    )
+    .pipe(extReplace(".webp"))
+    .pipe(rename({ suffix: "_350" }))
+    .pipe(gulp.dest("build/src/img/webp-350/"));
+});
+
+gulp.task("WebP", function () {
+  return gulp
+    .src("./src/img/*.*")
+    .pipe(
+      imagemin([
+        webp({
+          quality: 75,
+        }),
+      ])
+    )
+    .pipe(extReplace(".webp"))
+    .pipe(gulp.dest("build/src/img/webp/"));
+});
+
+gulp.task("resize", function () {
+  return gulp
+    .src("./src/img/*.*")
+    .pipe(
+      resizer({
+        format: "jpg",
+        width: 350,
+      })
+    )
+    .pipe(imagemin())
+    .pipe(rename({ suffix: "_350" }))
+    .pipe(gulp.dest("build/src/img/jpg-350/"));
+});
+
+gulp.task("optimazeImg", gulp.series("resizeWebP", "WebP", "resize"));
+
+gulp.task("exportWebP", function () {
+  let src = "./src/img/*.{png,jpg}"; // Where your PNGs are coming from.
+  let dest = "./build/src/img"; // Where your WebPs are going.
+
+  return gulp
+    .src(src)
+    .pipe(
+      imagemin([
+        webp({
+          quality: 75,
+        }),
+      ])
+    )
+    .pipe(extReplace(".webp"))
+    .pipe(gulp.dest(dest));
+});
 
 gulp.task("clean", function () {
   return gulp.src("build", { read: false }).pipe(clean());
