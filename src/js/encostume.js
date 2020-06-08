@@ -28,17 +28,17 @@ let costume = [];
 
 costume.push({
   name: "Venetian carnival costumes",
-  imgs: ["kolombina", "arlekin", "goldvenice", "bauto", "arlekolomb"],
+  imgs: ["bauto", "arlekolomb", "goldvenice", "kolombina", "arlekin"],
 });
 
 costume.push({
   name: "Rio de Janeiro carnival costumes",
-  imgs: ["sambaRed", "samba_2", "samba_orange"],
+  imgs: ["samba_red", "samba_2", "samba_orange"],
 });
 
 costume.push({
   name: "Robots Transformers ALX-16 and ALX-17",
-  imgs: ["robot_1", "robot3", "robots_5", "robot_2", "robots_4"],
+  imgs: ["robot_1", "robots_4", "robots_5", "robot_2", "robot_3"],
 });
 
 costume.push({
@@ -48,12 +48,12 @@ costume.push({
 
 costume.push({
   name: "Gods of Egypt",
-  imgs: ["egypt_gods_1", "Egypt2", "egypt_3", "egypt_1"],
+  imgs: ["egypt_gods_1", "egypt_2", "egypt_3", "egypt_1"],
 });
 
 costume.push({
   name: "Buffons",
-  imgs: ["jokers", "joker_1", "skomoroh_5", "joker_2", "skomoroh_6", "jokers_2", "joker_3"],
+  imgs: ["joker_3", "jokers", "joker_1", "skomoroh_6", "skomoroh_5", "jokers_2", "joker_2"],
 });
 
 costume.push({
@@ -68,12 +68,12 @@ costume.push({
 
 costume.push({
   name: "Light Angels",
-  imgs: ["lightAngels3", "light_angels_heart", "light_angels_1", "lightAngels2", "light_angels_5"],
+  imgs: ["light_angels_3", "light_angels_heart", "light_angels_1", "light_angels_2", "light_angels_5"],
 });
 
 costume.push({
   name: "Riders",
-  imgs: ["cowboy_2", "ukr_man_3", "cowboy_1", "riders"],
+  imgs: ["cowboy_2", "ukr_man_3", "riders"],
 });
 
 costume.push({
@@ -96,7 +96,7 @@ costume.push({
   imgs: [
     "ukrainians",
     "ukr_man_3",
-    "ukrman2",
+    "ukrmany",
     "ukr_woman_1",
     "ukr_woman_2",
     "ukr_woman_4",
@@ -114,7 +114,7 @@ costume.push({
 
 costume.push({
   name: "Avatars",
-  imgs: ["avatar_1", "avatar_5", "avatar_2", "Avatar3"],
+  imgs: ["avatar_1", "avatar_5", "avatar_2", "avatar_3"],
 });
 
 costume.push({
@@ -124,17 +124,17 @@ costume.push({
 
 costume.push({
   name: "Shopping ladies",
-  imgs: ["shopping_4", "shopping_6", "shopping_2", "shopping_5", "shopping_3"],
+  imgs: ["shopping_4", "shopping_5", "shopping_3", "shopping_6", "shopping_2"],
 });
 
 costume.push({
   name: "Can Can",
-  imgs: ["cancan", "Cancan2", "cancan_3"],
+  imgs: ["cancan", "cancan_2", "cancan_3"],
 });
 
 costume.push({
   name: "Ladies",
-  imgs: ["dama_violet", "dama_pink", "dama_green", "dama_red"],
+  imgs: ["dama_violet", "dama_pink", "dama_green", "dama_red", "dama_blue"],
 });
 
 costume.push({
@@ -149,12 +149,12 @@ costume.push({
 
 costume.push({
   name: "Euro-2012",
-  imgs: ["euro_england", "euro", "euro_spain"],
+  imgs: ["euro_england", "euro_spain", "euro"],
 });
 
 costume.push({
   name: "Spanish costumes",
-  imgs: ["spanish_woman_2", "spanish_man", "spanish_woman_1", "spanish_all"],
+  imgs: ["spanish_woman_2", "spanish_man", "spanish_all", "spanish_woman_1"],
 });
 
 costume.push({
@@ -174,12 +174,12 @@ costume.push({
 
 costume.push({
   name: "New Year and Christmas costumes",
-  imgs: ["NewMoroz", "moroz_snigurka_2", "new_moroz_2", "santa", "angelok", "jalynka", "birds_1", "moroz_snigurka"],
+  imgs: ["new_moroz", "moroz_snigurka_2", "new_moroz_2", "santa", "angelok", "jalynka", "birds_1", "moroz_snigurka"],
 });
 
 costume.push({
   name: "Halloween",
-  imgs: ["pumpkin_4", "black_lady", "baba_yaga", "koko_1", "gorynych", "pumpkin_4", "vamp_king_1", "izba_1"],
+  imgs: ["pumpkin_4", "black_lady", "baba_yaga", "koko_1", "gorynych", "pumpkin_2", "vamp_king_1", "izba_1"],
 });
 
 for (let i = 0; i < costume.length; i++) {
@@ -195,7 +195,17 @@ selectCostume.addEventListener("change", (ev) => {
 createSelect(costume, selectCostume);
 
 function createSelect(costume, select) {
-  select.classList.add("offset-3", "col-8", "position-fixed", "p-2", "rounded", "bg-light", "select-costume", "my-2");
+  select.classList.add(
+    "offset-3",
+    "offset-md-2",
+    "col-8",
+    "position-fixed",
+    "p-2",
+    "rounded",
+    "bg-light",
+    "select-costume",
+    "my-2"
+  );
 
   for (let i = 0; i < costume.length; i++) {
     let option = document.createElement("option");
@@ -213,98 +223,159 @@ function createSlider(obj, id) {
     console.log("Undefined costume");
     return;
   }
-  console.log("Hello Slider");
-  let costumeId = `costume${id}`;
+
+  let h3 = document.createElement("h4");
+  h3.className = "w-100 px-3 text-center text-white mb-3 pt-5";
+  h3.innerText = obj.name;
+  h3.setAttribute("id", `costume${id}`);
 
   let div = document.createElement("div");
-  div.classList.add("col-12", "px-4", "main", "text-center");
+  div.className = "swiper-container";
+
   let div1 = document.createElement("div");
-
-  div1.classList.add("carousel", "slide", "pt-5");
-  div1.setAttribute("id", costumeId);
-  div1.setAttribute("data-ride", "false");
-  costumeId = "#" + costumeId;
-
-  let h5 = document.createElement("h5");
-  h5.classList.add("main__header");
-  h5.innerText = obj.name;
-
-  let ol = document.createElement("ol");
-  ol.classList.add("carousel-indicators");
-
-  console.log(obj.imgs.length);
+  div1.className = "swiper-wrapper";
 
   for (let i = 0; i < obj.imgs.length; i++) {
-    let li = document.createElement("li");
-    li.setAttribute("data-target", costumeId);
-    li.setAttribute("data-slide-to", i);
+    let slide = document.createElement("div");
+    slide.className = "swiper-slide";
 
-    if (!i) li.classList.add("active");
-    ol.append(li);
+    let picture = document.createElement("picture");
+    picture.innerHTML = `<source type="image/webp" srcset="./src/img/webp/${obj.imgs[i]}.webp">
+    <img src="./src/img/${obj.imgs[i]}.jpg" class="img-fluid" />
+    </source>`;
+
+    slide.append(picture);
+    div1.append(slide);
   }
 
-  let div2 = document.createElement("div");
-  div2.classList.add("carousel-inner", "border-silver");
+  let pagination = document.createElement("div");
+  pagination.className = "swiper-pagination swiper-white";
 
-  for (let i = 0; i < obj.imgs.length; i++) {
-    let div = document.createElement("div");
-    let img = document.createElement("img");
+  let arrowNext = document.createElement("div");
+  arrowNext.className = "swiper-button-next btn-color";
 
-    div.classList.add("carousel-item");
-    if (!i) div.classList.add("active");
-
-    img.classList.add("d-block", "w-100");
-    img.src = pathImg + obj.imgs[i] + ".jpg";
-
-    img.setAttribute("alt", "Шахи");
-
-    div.append(img);
-    div2.append(div);
-  }
-
-  let aPrevious = document.createElement("a");
-  let spanPrevious = document.createElement("span");
-  let spanPrevious2 = document.createElement("span");
-
-  aPrevious.classList.add("carousel-control-prev");
-  aPrevious.setAttribute("href", costumeId);
-  aPrevious.setAttribute("role", "button");
-  aPrevious.setAttribute("data-slide", "prev");
-
-  spanPrevious.classList.add("carousel-control-prev-icon");
-  spanPrevious.setAttribute("aria-hidden", "true");
-
-  spanPrevious2.classList.add("sr-only");
-  spanPrevious2.innerText = "Previous";
-
-  aPrevious.append(spanPrevious);
-  aPrevious.append(spanPrevious2);
-
-  let aNext = document.createElement("a");
-  let spanNext = document.createElement("span");
-  let spanNext2 = document.createElement("span");
-
-  aNext.classList.add("carousel-control-next");
-  aNext.setAttribute("href", costumeId);
-  aNext.setAttribute("role", "button");
-  aNext.setAttribute("data-slide", "next");
-
-  spanNext.classList.add("carousel-control-next-icon");
-  spanNext.setAttribute("aria-hidden", "true");
-
-  spanNext2.classList.add("sr-only");
-  spanNext2.innerText = "Next";
-
-  aNext.append(spanNext);
-  aNext.append(spanNext2);
-
-  div1.append(h5);
-  div1.append(ol);
-  div1.append(div2);
-  div1.append(aPrevious);
-  div1.append(aNext);
+  let arrowPrev = document.createElement("div");
+  arrowPrev.className = "swiper-button-prev btn-color";
 
   div.append(div1);
+  div.append(pagination);
+  div.append(arrowNext);
+  div.append(arrowPrev);
 
+  mobile.append(h3);
   mobile.append(div);
+}
+
+let costumeDesktop = document.querySelector("#costumeDesktop");
+let costumeDesktop2 = document.querySelector("#costumeDesktop2");
+let place = costumeDesktop;
+
+for (let i = 0; i < costume.length; i++) {
+  let row = document.createElement("div");
+  place = i > 1 ? costumeDesktop2 : costumeDesktop;
+  row.className =
+    i > 1 ? "row d-flex justify-content-around text-center mb-5" : "row d-flex justify-content-around text-center mb-5";
+
+  let h2 = document.createElement("h2");
+  h2.innerText = costume[i].name;
+  h2.classList.add("text-center", "main__header", "mb-3");
+  place.append(h2);
+
+  if (costume[i].imgs.length === 5) {
+    row.innerHTML = `
+    <div class="col-3 my-auto">
+      <a href="./src/img/${costume[i].imgs[0]}.jpg">
+       <img src="./src/img/desktop/${costume[i].imgs[0]}.jpg" class="img-costume" />
+      </a>
+    </div>
+    <div class="col-6">
+      <div class="d-flex justify-content-around">
+        <a href="./src/img/${costume[i].imgs[1]}.jpg"> 
+          <img src="./src/img/desktop/${costume[i].imgs[1]}.jpg" class="img-costume" />
+        </a>
+        <a href="./src/img/${costume[i].imgs[2]}.jpg">
+          <img src="./src/img/desktop/${costume[i].imgs[2]}.jpg" class="img-costume" />
+        </a>
+      </div>
+      <a href="./src/img/${costume[i].imgs[4]}.jpg">
+       <img src="./src/img/desktop/${costume[i].imgs[4]}.jpg" class="img-costume" />
+      </a>
+    </div>
+    <div class="col-3 my-auto">
+      <a href="./src/img/${costume[i].imgs[3]}.jpg">
+      <img src="./src/img/desktop/${costume[i].imgs[3]}.jpg" class="img-costume" />
+      </a>
+    </div>`;
+
+    place.append(row);
+    continue;
+  }
+
+  if (costume[i].imgs.length >= 8) {
+    // create left
+    row.innerHTML = `
+    <div class="col-3 my-auto">
+      <a href="./src/img/${costume[i].imgs[0]}.jpg">
+       <img src="./src/img/desktop/${costume[i].imgs[0]}.jpg" class="img-costume" />
+      </a>
+    </div>
+    <div class="col-6">
+      <div class="d-flex justify-content-around">
+        <a href="./src/img/${costume[i].imgs[1]}.jpg"> 
+          <img src="./src/img/desktop/${costume[i].imgs[1]}.jpg" class="img-costume" />
+        </a>
+        <a href="./src/img/${costume[i].imgs[2]}.jpg">
+          <img src="./src/img/desktop/${costume[i].imgs[2]}.jpg" class="img-costume" />
+        </a>
+      </div>
+      <a href="./src/img/${costume[i].imgs[4]}.jpg">
+       <img src="./src/img/desktop/${costume[i].imgs[4]}.jpg" class="img-costume" />
+      </a>
+    </div>
+    <div class="col-3 my-auto">
+      <a href="./src/img/${costume[i].imgs[3]}.jpg">
+      <img src="./src/img/desktop/${costume[i].imgs[3]}.jpg" class="img-costume" />
+      </a>
+    </div>`;
+
+    for (let k = 5; k < costume[i].imgs.length; k++) {
+      let name = costume[i].imgs[k];
+
+      let a = document.createElement("a");
+      a.className = "my-auto";
+      a.innerHTML = `
+      <a href="./src/img/${name}.jpg">
+        <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
+      </a>
+      `;
+
+      row.append(a);
+    }
+    place.append(row);
+    continue;
+  }
+
+  let div7 = document.createElement("div");
+  div7.className = "w-100 d-flex justify-content-around";
+
+  for (let k = 0; k < costume[i].imgs.length; k++) {
+    let name = costume[i].imgs[k];
+
+    let a = document.createElement("a");
+    a.className = "my-auto";
+    a.innerHTML = `
+    <a href="./src/img/${name}.jpg">
+      <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
+    </a>`;
+
+    if (costume[i].imgs.length === 7 && k >= 4) {
+      div7.append(a);
+      continue;
+    }
+
+    row.append(a);
+  }
+  row.append(div7);
+
+  place.append(row);
 }

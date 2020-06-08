@@ -37,6 +37,9 @@
   <button class="navbar-toggler bg-light" type="button" data-toggle="offcanvas">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <a class="d-inline-block d-lg-none navigation__call-btn" href="tel:+380503445323">
+    <img src="./src/icon/phone22.png" alt="Наш телефон" />
+  </a>
   <div class="navbar-collapse offcanvas-collapse mobile__bg-style" id="navbarSupportedContent">
     <button class="offcanvas-close text-light" type="button" data-toggle="offcanvas-close">
       ×
@@ -103,12 +106,23 @@
 <div class="container" data-aos="fade-left" data-aos-duration="800">
   <div class="row">
     <div class="col-12 d-flex justify-content-between mb-md-2">
-      <div class="mx-md-5 pl-md-4">
+      <div class="mx-md-5 pl-md-4 d-flex">
         <a href="http://www.facebook.com/StiltwalkersKyiv" target="_blank">
           <img class="mx-1" src="./src/icon/facebook.png" alt="Наш Facebook" />
         </a>
         <a href="http://www.instagram.com/stiltwalkers/" target="_blank">
           <img class="mx-1" src="./src/icon/insta.png" alt="Наш Instagram" />
+        </a>
+
+        <a class="d-none d-sm-inline-block" href="https://web.whatsapp.com/send?phone=380503445323">
+          <img src="./src/icon/whatsapp.png" alt="Наш WhatsApp" class="mx-1" />
+        </a>
+
+        <a class="d-none d-sm-inline-block" href="viber://chat?number=380503445323">
+          <img src="./src/icon/viber.png" alt="Наш вайбер" class="mx-1" />
+        </a>
+        <a class="d-none d-lg-inline-block" href="tel:+380503445323">
+          <img src="./src/icon/phone22.png" alt="Наш телефон" class="mx-1" />
         </a>
       </div>
 
@@ -131,7 +145,7 @@
     <div class="container">
       <div class="row">
         <!-- Navigation -->
-        <div class="col-3 ml-lg-5 d-none d-xl-block">
+        <div class="col-3 ml-lg-5 d-none d-lg-block">
   <nav>
     <div class="nav ml-lg-3">
       <div data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
@@ -307,51 +321,68 @@
             </div>
 
             <div class="col-3 col-md-4 mb-md-3">
-              <img class="contact__icon" src=" ./src/icon/viber.png" />
-              <img class="contact__icon" src=" ./src/icon/whatsapp.png" />
-              <img class="contact__icon d-none d-md-inline-block" src=" ./src/icon/vodafone.png" />
+              <a class="d-none d-lg-inline-block" href="viber://chat?number=380503445323">
+                <img class="contact__icon" src=" ./src/icon/viber.png" />
+              </a>
+              <a class="d-block d-lg-none" href="viber://add?number=380503445323">
+                <img class="contact__icon" src=" ./src/icon/viber.png" />
+              </a>
+              <a href="https://wa.me/380503445323">
+                <img class="contact__icon" src=" ./src/icon/whatsapp.png" />
+              </a>
+              <a href="tel:+380503445323">
+                <img class="contact__icon d-none d-md-inline-block" src=" ./src/icon/vodafone.png" />
+              </a>
             </div>
 
             <div class="col-8">
               <p>
-                050-344-53-23
+                <a class="text-white" href="tel:+380503445323"> 050-344-53-23</a>
               </p>
             </div>
 
             <div class="col-3 text-right pr-5 mb-md-3">
-              <img class="contact__icon" src=" ./src/icon/lifecell.png" />
+              <a class="text-white" href="tel:+380639542953">
+                <img class="contact__icon" src=" ./src/icon/lifecell.png"
+              /></a>
             </div>
 
             <div class="offset-md-1 col-8">
               <p>
-                063-954-2-953
+                <a class="text-white" href="tel:+380639542953"> 063-954-2-953</a>
               </p>
             </div>
 
             <div class="col-3 text-right pr-5 mb-md-3">
-              <img class="contact__icon" src=" ./src/icon/mail_icon.png" />
+              <a class="text-white" href="mailto:alexlighty@ukr.net">
+                <img class="contact__icon" src=" ./src/icon/mail_icon.png" />
+              </a>
             </div>
             <div class="offset-md-1 col-8">
               <p>
-                alexlighty@ukr.net
+                <a class="text-white" href="mailto:alexlighty@ukr.net">alexlighty@ukr.net</a>
               </p>
             </div>
 
             <div class="col-3 text-right pr-5 mb-md-3">
-              <img class="contact__icon" src=" ./src/icon/gmail_icon.png" />
+              <a class="text-white" href="mailto:stiltwalkerskyiv@gmail.com">
+                <img class="contact__icon" src=" ./src/icon/gmail_icon.png" />
+              </a>
             </div>
             <div class="offset-md-1 col-8">
               <p>
-                stiltwalkerskyiv@gmail.com
+                <a class="text-white" href="mailto:stiltwalkerskyiv@gmail.com">stiltwalkerskyiv@gmail.com</a>
               </p>
             </div>
 
             <div class="col-3 text-right pr-5 mb-md-3">
-              <img class="contact__icon" src=" ./src/icon/skype.png" />
+              <a class="text-white" href="skype:alexlighty?chat">
+                <img class="contact__icon" src=" ./src/icon/skype.png" />
+              </a>
             </div>
             <div class="offset-md-1 col-8">
               <p>
-                alexlighty
+                <a class="text-white" href="skype:alexlighty?chat"> alexlighty</a>
               </p>
             </div>
           </div>

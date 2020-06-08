@@ -18,6 +18,8 @@ closeMenu.addEventListener("click", () => {
   select.classList.remove("z-index-10");
 });
 
+// function firstCostume ("Масляна");
+
 let costume = [];
 
 costume.push({
@@ -82,7 +84,7 @@ costume.push({
 
 costume.push({
   name: "Вершники",
-  imgs: ["cowboy_2", "ukr_man_3", "cowboy_1", "riders"],
+  imgs: ["cowboy_2", "ukr_man_3", "riders"],
   alts: [],
 });
 
@@ -218,7 +220,17 @@ selectCostume.addEventListener("change", (ev) => {
 createSelect(costume, selectCostume);
 
 function createSelect(costume, select) {
-  select.classList.add("offset-3", "col-8", "position-fixed", "p-2", "rounded", "bg-light", "select-costume", "my-2");
+  select.classList.add(
+    "offset-3",
+    "offset-md-2",
+    "col-8",
+    "position-fixed",
+    "p-2",
+    "rounded",
+    "bg-light",
+    "select-costume",
+    "my-2"
+  );
 
   for (let i = 0; i < costume.length; i++) {
     let option = document.createElement("option");
@@ -283,19 +295,6 @@ let costumeDesktop = document.querySelector("#costumeDesktop");
 let costumeDesktop2 = document.querySelector("#costumeDesktop2");
 let place = costumeDesktop;
 
-/* <h2 class="text-center main__header mb-3">Карнавал Ріо-де-Жанейро</h2> */
-/* <div class="row d-flex justify-content-around text-center mb-5">
-  <a class="my-auto">
-    <img src="./src/img/samba_red.jpg" class="img-vertical" />
-  </a>
-  <a class="my-auto">
-    <img src="./src/img/samba_2.jpg" class="img-horizontal" />
-  </a>
-  <a class="my-auto">
-    <img src="./src/img/samba_orange.jpg" class="img-vertical" />
-  </a>
-</div>; */
-
 for (let i = 0; i < costume.length; i++) {
   let row = document.createElement("div");
   place = i > 1 ? costumeDesktop2 : costumeDesktop;
@@ -308,98 +307,72 @@ for (let i = 0; i < costume.length; i++) {
   place.append(h2);
 
   if (costume[i].imgs.length === 5) {
-    // create left
-    let div1 = document.createElement("div");
-    div1.className = "col-3 my-auto";
-
-    let name1 = costume[i].imgs[0];
-    let img1 = new Image();
-    img1.src = `./src/img/desktop/${name1}.jpg`;
-    img1.className = "img-costume";
-
-    div1.append(img1);
-    //create center
-    let div2 = document.createElement("div");
-    div2.className = "col-6";
-
-    let div2_top = document.createElement("div");
-    div2_top.className = "d-flex justify-content-around";
-    // foto 2
-    let name2 = costume[i].imgs[1];
-    let img2 = new Image();
-    img2.src = `./src/img/desktop/${name2}.jpg`;
-    img2.className = "img-costume";
-    // foto 3
-    let name3 = costume[i].imgs[2];
-    let img3 = new Image();
-    img3.src = `./src/img/desktop/${name3}.jpg`;
-    img3.className = "img-costume";
-
-    div2_top.append(img2);
-    div2_top.append(img3);
-    // foto 5
-    let name5 = costume[i].imgs[4];
-    let img5 = new Image();
-    img5.src = `./src/img/desktop/${name5}.jpg`;
-    img5.className = "img-costume";
-
-    div2.append(div2_top);
-    div2.append(img5);
-
-    // create right
-    let div3 = document.createElement("div");
-    div3.className = "col-3 my-auto";
-    // foto 4
-    let name4 = costume[i].imgs[3];
-    let img4 = new Image();
-    img4.src = `./src/img/desktop/${name4}.jpg`;
-    img4.className = "img-costume";
-
-    div3.append(img4);
-
-    row.append(div1);
-    row.append(div2);
-    row.append(div3);
+    row.innerHTML = `
+    <div class="col-3 my-auto">
+      <a href="./src/img/${costume[i].imgs[0]}.jpg">
+       <img src="./src/img/desktop/${costume[i].imgs[0]}.jpg" class="img-costume" />
+      </a>
+    </div>
+    <div class="col-6">
+      <div class="d-flex justify-content-around">
+        <a href="./src/img/${costume[i].imgs[1]}.jpg"> 
+          <img src="./src/img/desktop/${costume[i].imgs[1]}.jpg" class="img-costume" />
+        </a>
+        <a href="./src/img/${costume[i].imgs[2]}.jpg">
+          <img src="./src/img/desktop/${costume[i].imgs[2]}.jpg" class="img-costume" />
+        </a>
+      </div>
+      <a href="./src/img/${costume[i].imgs[4]}.jpg">
+       <img src="./src/img/desktop/${costume[i].imgs[4]}.jpg" class="img-costume" />
+      </a>
+    </div>
+    <div class="col-3 my-auto">
+      <a href="./src/img/${costume[i].imgs[3]}.jpg">
+      <img src="./src/img/desktop/${costume[i].imgs[3]}.jpg" class="img-costume" />
+      </a>
+    </div>`;
 
     place.append(row);
     continue;
   }
 
-  //   <div class="row d-flex justify-content-around text-center mb-5">
-  //   <div class="col-3 my-auto"><img src="./src/img/desktop/new_moroz.jpg" class="img-costume" /></div>
-  //   <div class="col-6">
-  //     <div class="d-flex justify-content-around">
-  //       <img src="./src/img/desktop/moroz_snigurka_2.jpg" class="img-costume" /><img
-  //         src="./src/img/desktop/new_moroz_2.jpg"
-  //         class="img-costume"
-  //       />
-  //     </div>
-  //     <img src="./src/img/desktop/angelok.jpg" class="img-costume" />
-  //   </div>
-  //   <div class="col-3 my-auto"><img src="./src/img/desktop/santa.jpg" class="img-costume" /></div>
-  // </div>
-
   if (costume[i].imgs.length >= 8) {
     // create left
     row.innerHTML = `
     <div class="col-3 my-auto">
-      <img src="./src/img/desktop/${costume[i].imgs[0]}.jpg" class="img-costume" />
+      <a href="./src/img/${costume[i].imgs[0]}.jpg">
+       <img src="./src/img/desktop/${costume[i].imgs[0]}.jpg" class="img-costume" />
+      </a>
     </div>
     <div class="col-6">
       <div class="d-flex justify-content-around">
-        <img src="./src/img/desktop/${costume[i].imgs[1]}.jpg" class="img-costume" />
-        <img src="./src/img/desktop/${costume[i].imgs[2]}.jpg" class="img-costume" />
+        <a href="./src/img/${costume[i].imgs[1]}.jpg"> 
+          <img src="./src/img/desktop/${costume[i].imgs[1]}.jpg" class="img-costume" />
+        </a>
+        <a href="./src/img/${costume[i].imgs[2]}.jpg">
+          <img src="./src/img/desktop/${costume[i].imgs[2]}.jpg" class="img-costume" />
+        </a>
       </div>
-      <img src="./src/img/desktop/${costume[i].imgs[4]}.jpg" class="img-costume" />
+      <a href="./src/img/${costume[i].imgs[4]}.jpg">
+       <img src="./src/img/desktop/${costume[i].imgs[4]}.jpg" class="img-costume" />
+      </a>
     </div>
-    <div class="col-3 my-auto"><img src="./src/img/desktop/${costume[i].imgs[3]}.jpg" class="img-costume" /></div>`;
+    <div class="col-3 my-auto">
+      <a href="./src/img/${costume[i].imgs[3]}.jpg">
+      <img src="./src/img/desktop/${costume[i].imgs[3]}.jpg" class="img-costume" />
+      </a>
+    </div>`;
 
     for (let k = 5; k < costume[i].imgs.length; k++) {
       let name = costume[i].imgs[k];
 
       let a = document.createElement("a");
       a.className = "my-auto";
-      a.innerHTML = `<img class="img-costume" src="./src/img/desktop/${name}.jpg" />`;
+      a.innerHTML = `
+      <a href="./src/img/${name}.jpg">
+        <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
+      </a>
+      `;
 
       row.append(a);
     }
@@ -415,7 +388,10 @@ for (let i = 0; i < costume.length; i++) {
 
     let a = document.createElement("a");
     a.className = "my-auto";
-    a.innerHTML = `<img class="img-costume" src="./src/img/desktop/${name}.jpg" />`;
+    a.innerHTML = `
+    <a href="./src/img/${name}.jpg">
+      <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
+    </a>`;
 
     if (costume[i].imgs.length === 7 && k >= 4) {
       div7.append(a);

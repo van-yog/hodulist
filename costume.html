@@ -69,75 +69,13 @@
     <!-- Header -->
     @@include("./templates/header.html")
 
-    <div class="container-fluid py-4 px-5 d-none d-lg-block">
-      <div class="row mb-5 px-4">
+    <div class="container-fluid py-4 px-xl-4 d-none d-lg-block">
+      <div class="row px-xl-4">
         <!-- Navigation -->
         @@include("./templates/desktop-navigation.html")
 
         <!-- Масляна -->
-        <div id="costumeDesktop" class="col-xl-8 d-none d-lg-block main border-silver-img">
-          <!-- <div class="row d-flex justify-content-around text-center border-silver-img">
-            <div class="col m-1">
-              <img class="img-vertical" src="./src/img/goldvenice.jpg" alt="" />
-            </div>
-            <div class="col m-1">
-              <img class="img-vertical" src="./src/img/goldvenice.jpg" alt="" />
-            </div>
-            <div class="col m-1">
-              <img class="img-vertical" src="./src/img/goldvenice.jpg" alt="" />
-            </div>
-            <div class="col m-1">
-              <img class="img-vertical" src="./src/img/goldvenice.jpg" alt="" />
-            </div>
-          </div> -->
-        </div>
-        <!-- <div class="col-12 col-lg-8 d-none d-lg-block my-2 pr-md-4 main text-center">
-          <table class="text-center" width="100%" height="534">
-            <tr>
-              <td height="38" colspan="4" class="main__header">Масляна</td>
-            </tr>
-            <tr>
-              <td rowspan="2">
-                <a href="./src/img/jokers.jpg" target="_blank">
-                  <img src="./src/img/jokers.jpg" width="170" height="220" alt="Белая птица" />
-                </a>
-              </td>
-              <td height="162">
-                <a href="./src/img/gopak_4.jpg" target="_blank">
-                  <img src="./src/img/gopak_4.jpg" width="220" height="170" alt="Робот" />
-                </a>
-              </td>
-              <td>
-                <a href="./src/img/jokers_2.jpg" target="_blank">
-                  <img src="./src/img/jokers_2.jpg" width="220" height="170" alt="Робот" />
-                </a>
-              </td>
-              <td rowspan="2">
-                <a href="./src/img/imp_black.jpg" target="_blank">
-                  <img src="./src/img/imp_black.jpg" width="170" height="220" alt="Белые птицы" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td height="162" colspan="2">
-                <a href="./src/img/ukrainians.jpg" target="_blank">
-                  <img src="./src/img/ukrainians.jpg" width="220" height="170" alt="Робот" />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td height="162" colspan="4">
-                <iframe
-                  width="640"
-                  height="360"
-                  src="https://www.youtube.com/embed/BVR_RI-ddiA?rel=0&amp;showinfo=0"
-                  frameborder="0"
-                  allowfullscreen
-                ></iframe>
-              </td>
-            </tr>
-          </table>
-        </div> -->
+        <div id="costumeDesktop" class="col-lg-8 d-none d-lg-block main border-silver-img"></div>
       </div>
     </div>
 
@@ -148,6 +86,10 @@
     <div class="container d-lg-none">
       <div id="mobile" class="row mb-3"></div>
     </div>
+
+    <a class="d-inline-block d-lg-none m-4 fixed-bottom" href="tel:+380503445323">
+      <img src="./src/icon/phone22.png" alt="Наш телефон" />
+    </a>
 
     <!-- Footer -->
     @@include("./templates/footer.html")
@@ -161,7 +103,7 @@
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-    <!-- Initialize Swiper -->
+    <!-- Initialize Swiper mobile -->
     <script>
       let swiper;
       setTimeout(() => {
@@ -179,6 +121,19 @@
           },
         });
       }, 200);
+    </script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper("#swiperDesktop", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
     </script>
   </body>
 </html>
