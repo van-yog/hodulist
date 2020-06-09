@@ -33,24 +33,7 @@
   opacity: 0.6 !important;
 }
 
-#myCarousel .list-inline {
-  white-space: nowrap;
-  overflow-x: auto;
-}
-
-#myCarousel .carousel-indicators {
-  position: static;
-  left: initial;
-  width: initial;
-  margin-left: initial;
-}
-
-#myCarousel .carousel-indicators > li {
-  width: initial;
-  height: initial;
-  text-indent: initial;
-}
-
-#myCarousel .carousel-indicators > li.active img {
-  opacity: 0.7;
+.call-btn {
+  box-shadow: 0px 0px 4px 4px #0000008e;
+  border-radius: 50%;
 }

@@ -20,7 +20,7 @@ gulp.task("resizeWebP", function () {
     .pipe(
       resizer({
         format: "jpg",
-        width: 350,
+        width: 600,
       })
     )
     .pipe(
@@ -31,8 +31,8 @@ gulp.task("resizeWebP", function () {
       ])
     )
     .pipe(extReplace(".webp"))
-    .pipe(rename({ suffix: "_350" }))
-    .pipe(gulp.dest("build/src/img/webp-350/"));
+    .pipe(rename({ suffix: "_600" }))
+    .pipe(gulp.dest("build/src/img/webp-600/"));
 });
 
 gulp.task("WebP", function () {
