@@ -18,8 +18,6 @@ closeMenu.addEventListener("click", () => {
   select.classList.remove("z-index-10");
 });
 
-// function firstCostume ("Масляна");
-
 let costume = [];
 
 costume.push({
@@ -213,205 +211,105 @@ let place = costumeDesktop;
 
 window.onresize = function () {
   if (document.body.clientWidth >= 978) {
-    for (let i = 0; i < costume.length; i++) {
-      let row = document.createElement("div");
-      place = i > 1 ? costumeDesktop2 : costumeDesktop;
-      row.className =
-        i > 1
-          ? "row d-flex justify-content-around text-center mb-5"
-          : "row d-flex justify-content-around text-center mb-5";
-
-      let h2 = document.createElement("h2");
-      h2.innerText = costume[i].name;
-      h2.classList.add("text-center", "main__header", "mb-3");
-      place.append(h2);
-
-      if (costume[i].imgs.length === 5) {
-        row.innerHTML = `
-      <div class="col-3 my-auto">
-        <a href="./src/img/${costume[i].imgs[0]}.jpg">
-         <img src="./src/img/desktop/${costume[i].imgs[0]}.jpg" class="img-costume" />
-        </a>
-      </div>
-      <div class="col-6">
-        <div class="d-flex justify-content-around">
-          <a href="./src/img/${costume[i].imgs[1]}.jpg"> 
-            <img src="./src/img/desktop/${costume[i].imgs[1]}.jpg" class="img-costume" />
-          </a>
-          <a href="./src/img/${costume[i].imgs[2]}.jpg">
-            <img src="./src/img/desktop/${costume[i].imgs[2]}.jpg" class="img-costume" />
-          </a>
-        </div>
-        <a href="./src/img/${costume[i].imgs[4]}.jpg">
-         <img src="./src/img/desktop/${costume[i].imgs[4]}.jpg" class="img-costume" />
-        </a>
-      </div>
-      <div class="col-3 my-auto">
-        <a href="./src/img/${costume[i].imgs[3]}.jpg">
-        <img src="./src/img/desktop/${costume[i].imgs[3]}.jpg" class="img-costume" />
-        </a>
-      </div>`;
-
-        place.append(row);
-        continue;
-      }
-
-      if (costume[i].imgs.length >= 8) {
-        // create left
-        row.innerHTML = `
-      <div class="col-3 my-auto">
-        <a href="./src/img/${costume[i].imgs[0]}.jpg">
-         <img src="./src/img/desktop/${costume[i].imgs[0]}.jpg" class="img-costume" />
-        </a>
-      </div>
-      <div class="col-6">
-        <div class="d-flex justify-content-around">
-          <a href="./src/img/${costume[i].imgs[1]}.jpg"> 
-            <img src="./src/img/desktop/${costume[i].imgs[1]}.jpg" class="img-costume" />
-          </a>
-          <a href="./src/img/${costume[i].imgs[2]}.jpg">
-            <img src="./src/img/desktop/${costume[i].imgs[2]}.jpg" class="img-costume" />
-          </a>
-        </div>
-        <a href="./src/img/${costume[i].imgs[4]}.jpg">
-         <img src="./src/img/desktop/${costume[i].imgs[4]}.jpg" class="img-costume" />
-        </a>
-      </div>
-      <div class="col-3 my-auto">
-        <a href="./src/img/${costume[i].imgs[3]}.jpg">
-        <img src="./src/img/desktop/${costume[i].imgs[3]}.jpg" class="img-costume" />
-        </a>
-      </div>`;
-
-        for (let k = 5; k < costume[i].imgs.length; k++) {
-          let name = costume[i].imgs[k];
-
-          let a = document.createElement("a");
-          a.className = "my-auto";
-          a.innerHTML = `
-        <a href="./src/img/${name}.jpg">
-          <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
-        </a>
-        `;
-
-          row.append(a);
-        }
-        place.append(row);
-        continue;
-      }
-
-      let div7 = document.createElement("div");
-      div7.className = "w-100 d-flex justify-content-around";
-
-      for (let k = 0; k < costume[i].imgs.length; k++) {
-        let name = costume[i].imgs[k];
-
-        let a = document.createElement("a");
-        a.className = "my-auto";
-        a.innerHTML = `
-      <a href="./src/img/${name}.jpg">
-        <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
-      </a>`;
-
-        if (costume[i].imgs.length === 7 && k >= 4) {
-          div7.append(a);
-          continue;
-        }
-
-        row.append(a);
-      }
-      row.append(div7);
-
-      place.append(row);
-    }
+    showDesktopCostume();
   } else {
-    for (let i = 0; i < costume.length; i++) {
-      createSlider(costume[i], i);
-    }
-
-    selectCostume.addEventListener("change", (ev) => {
-      let value = ev.target.value;
-      console.dir(value);
-      location.href = value;
-    });
-
-    createSelect(costume, selectCostume);
-
-    function createSelect(costume, select) {
-      select.classList.add(
-        "offset-3",
-        "offset-md-2",
-        "col-8",
-        "position-fixed",
-        "p-2",
-        "rounded",
-        "bg-light",
-        "select-costume",
-        "my-2"
-      );
-
-      for (let i = 0; i < costume.length; i++) {
-        let option = document.createElement("option");
-        option.innerText = costume[i].name;
-        option.setAttribute("value", `#costume${i}`);
-
-        select.append(option);
-      }
-
-      mobile.prepend(select);
-    }
-
-    function createSlider(obj, id) {
-      if (!obj) {
-        console.log("Undefined costume");
-        return;
-      }
-
-      let h3 = document.createElement("h4");
-      h3.className = "w-100 px-3 text-center text-white mb-3 pt-5";
-      h3.innerText = obj.name;
-      h3.setAttribute("id", `costume${id}`);
-
-      let div = document.createElement("div");
-      div.className = "swiper-container";
-
-      let div1 = document.createElement("div");
-      div1.className = "swiper-wrapper";
-
-      for (let i = 0; i < obj.imgs.length; i++) {
-        let slide = document.createElement("div");
-        slide.className = "swiper-slide";
-
-        let picture = document.createElement("picture");
-        picture.innerHTML = `<source type="image/webp" srcset="./src/img/webp-600/${obj.imgs[i]}_600.webp">
-        <img src="./src/img/jpg-350/${obj.imgs[i]}_350.jpg" class="img-fluid" />
-        </source>`;
-
-        slide.append(picture);
-        div1.append(slide);
-      }
-
-      let pagination = document.createElement("div");
-      pagination.className = "swiper-pagination swiper-white";
-
-      let arrowNext = document.createElement("div");
-      arrowNext.className = "swiper-button-next btn-color";
-
-      let arrowPrev = document.createElement("div");
-      arrowPrev.className = "swiper-button-prev btn-color";
-
-      div.append(div1);
-      div.append(pagination);
-      div.append(arrowNext);
-      div.append(arrowPrev);
-
-      mobile.append(h3);
-      mobile.append(div);
-    }
+    this.showMobileCostume();
   }
 };
 
 if (document.body.clientWidth >= 978) {
+  showDesktopCostume();
+} else {
+  showMobileCostume();
+}
+
+function showMobileCostume() {
+  for (let i = 0; i < costume.length; i++) {
+    createSlider(costume[i], i);
+  }
+
+  selectCostume.addEventListener("change", (ev) => {
+    let value = ev.target.value;
+    console.dir(value);
+    location.href = value;
+  });
+
+  createSelect(costume, selectCostume);
+
+  function createSelect(costume, select) {
+    select.classList.add(
+      "offset-3",
+      "offset-md-2",
+      "col-8",
+      "position-fixed",
+      "p-2",
+      "rounded",
+      "bg-light",
+      "select-costume",
+      "my-2"
+    );
+
+    for (let i = 0; i < costume.length; i++) {
+      let option = document.createElement("option");
+      option.innerText = costume[i].name;
+      option.setAttribute("value", `#costume${i}`);
+
+      select.append(option);
+    }
+
+    mobile.prepend(select);
+  }
+
+  function createSlider(obj, id) {
+    if (!obj) {
+      console.log("Undefined costume");
+      return;
+    }
+
+    let h3 = document.createElement("h4");
+    h3.className = "w-100 px-3 text-center text-white mb-3 pt-5";
+    h3.innerText = obj.name;
+    h3.setAttribute("id", `costume${id}`);
+
+    let div = document.createElement("div");
+    div.className = "swiper-container";
+
+    let div1 = document.createElement("div");
+    div1.className = "swiper-wrapper";
+
+    for (let i = 0; i < obj.imgs.length; i++) {
+      let slide = document.createElement("div");
+      slide.className = "swiper-slide";
+
+      let picture = document.createElement("picture");
+      picture.innerHTML = `<source type="image/webp" srcset="./src/img/webp-600/${obj.imgs[i]}_600.webp">
+      <img src="./src/img/jpg-350/${obj.imgs[i]}_350.jpg" class="img-fluid" />
+      </source>`;
+
+      slide.append(picture);
+      div1.append(slide);
+    }
+
+    let pagination = document.createElement("div");
+    pagination.className = "swiper-pagination swiper-white";
+
+    let arrowNext = document.createElement("div");
+    arrowNext.className = "swiper-button-next btn-color";
+
+    let arrowPrev = document.createElement("div");
+    arrowPrev.className = "swiper-button-prev btn-color";
+
+    div.append(div1);
+    div.append(pagination);
+    div.append(arrowNext);
+    div.append(arrowPrev);
+
+    mobile.append(h3);
+    mobile.append(div);
+  }
+}
+
+function showDesktopCostume() {
   for (let i = 0; i < costume.length; i++) {
     let row = document.createElement("div");
     place = i > 1 ? costumeDesktop2 : costumeDesktop;
@@ -522,89 +420,5 @@ if (document.body.clientWidth >= 978) {
     row.append(div7);
 
     place.append(row);
-  }
-} else {
-  for (let i = 0; i < costume.length; i++) {
-    createSlider(costume[i], i);
-  }
-
-  selectCostume.addEventListener("change", (ev) => {
-    let value = ev.target.value;
-    console.dir(value);
-    location.href = value;
-  });
-
-  createSelect(costume, selectCostume);
-
-  function createSelect(costume, select) {
-    select.classList.add(
-      "offset-3",
-      "offset-md-2",
-      "col-8",
-      "position-fixed",
-      "p-2",
-      "rounded",
-      "bg-light",
-      "select-costume",
-      "my-2"
-    );
-
-    for (let i = 0; i < costume.length; i++) {
-      let option = document.createElement("option");
-      option.innerText = costume[i].name;
-      option.setAttribute("value", `#costume${i}`);
-
-      select.append(option);
-    }
-
-    mobile.prepend(select);
-  }
-
-  function createSlider(obj, id) {
-    if (!obj) {
-      console.log("Undefined costume");
-      return;
-    }
-
-    let h3 = document.createElement("h4");
-    h3.className = "w-100 px-3 text-center text-white mb-3 pt-5";
-    h3.innerText = obj.name;
-    h3.setAttribute("id", `costume${id}`);
-
-    let div = document.createElement("div");
-    div.className = "swiper-container";
-
-    let div1 = document.createElement("div");
-    div1.className = "swiper-wrapper";
-
-    for (let i = 0; i < obj.imgs.length; i++) {
-      let slide = document.createElement("div");
-      slide.className = "swiper-slide";
-
-      let picture = document.createElement("picture");
-      picture.innerHTML = `<source type="image/webp" srcset="./src/img/webp-600/${obj.imgs[i]}_600.webp">
-      <img src="./src/img/jpg-350/${obj.imgs[i]}_350.jpg" class="img-fluid" />
-      </source>`;
-
-      slide.append(picture);
-      div1.append(slide);
-    }
-
-    let pagination = document.createElement("div");
-    pagination.className = "swiper-pagination swiper-white";
-
-    let arrowNext = document.createElement("div");
-    arrowNext.className = "swiper-button-next btn-color";
-
-    let arrowPrev = document.createElement("div");
-    arrowPrev.className = "swiper-button-prev btn-color";
-
-    div.append(div1);
-    div.append(pagination);
-    div.append(arrowNext);
-    div.append(arrowPrev);
-
-    mobile.append(h3);
-    mobile.append(div);
   }
 }
