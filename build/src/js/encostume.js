@@ -51,12 +51,6 @@ costume.push({
 });
 
 costume.push({
-  name: "Chess",
-  imgs: ["chess_1", "chess_2", "chess_3", "chess_4"],
-  video: ["https://www.youtube.com/embed/BVR_RI-ddiA?rel=0&showinfo=0"],
-});
-
-costume.push({
   name: "Gods of Egypt",
   imgs: ["egypt_gods_1", "egypt_2", "egypt_3", "egypt_1"],
 });

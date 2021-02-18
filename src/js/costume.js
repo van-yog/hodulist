@@ -24,6 +24,7 @@ costume.push({
   name: "Масляна",
   imgs: ["jokers", "gopak_4", "imp_black", "ukrainians", "jokers_2"],
   alts: [],
+  video: ["https://www.youtube.com/embed/BVR_RI-ddiA?rel=0&showinfo=0"],
 });
 
 costume.push({
@@ -58,7 +59,15 @@ costume.push({
 
 costume.push({
   name: "Джокери і Скоморохи",
-  imgs: ["joker_3", "jokers", "joker_1", "skomoroh_6", "skomoroh_5", "jokers_2", "joker_2"],
+  imgs: [
+    "joker_3",
+    "jokers",
+    "joker_1",
+    "skomoroh_6",
+    "skomoroh_5",
+    "jokers_2",
+    "joker_2",
+  ],
   alts: [],
 });
 
@@ -76,7 +85,13 @@ costume.push({
 
 costume.push({
   name: "Світлі Ангели",
-  imgs: ["light_angels_3", "light_angels_heart", "light_angels_1", "light_angels_2", "light_angels_5"],
+  imgs: [
+    "light_angels_3",
+    "light_angels_heart",
+    "light_angels_1",
+    "light_angels_2",
+    "light_angels_5",
+  ],
   alts: [],
 });
 
@@ -195,13 +210,31 @@ costume.push({
 
 costume.push({
   name: "Новорічні костюми",
-  imgs: ["new_moroz", "moroz_snigurka_2", "new_moroz_2", "santa", "angelok", "jalynka", "birds_1", "moroz_snigurka"],
+  imgs: [
+    "new_moroz",
+    "moroz_snigurka_2",
+    "new_moroz_2",
+    "santa",
+    "angelok",
+    "jalynka",
+    "birds_1",
+    "moroz_snigurka",
+  ],
   alts: [],
 });
 
 costume.push({
   name: "Хелловін",
-  imgs: ["pumpkin_4", "black_lady", "baba_yaga", "koko_1", "gorynych", "pumpkin_2", "vamp_king_1", "izba_1"],
+  imgs: [
+    "pumpkin_4",
+    "black_lady",
+    "baba_yaga",
+    "koko_1",
+    "gorynych",
+    "pumpkin_2",
+    "vamp_king_1",
+    "izba_1",
+  ],
   alts: [],
 });
 
@@ -306,6 +339,13 @@ function showMobileCostume() {
 
     mobile.append(h3);
     mobile.append(div);
+
+    if (obj.video)
+      mobile.innerHTML += `
+         <div class="text-center w-100"> 
+           <iframe class="mobile__youtube" src="${obj.video[0]}" > </iframe>
+         </div>
+    `;
   }
 }
 
@@ -349,6 +389,13 @@ function showDesktopCostume() {
       </a>
     </div>`;
 
+      if (costume[i].video) {
+        row.innerHTML += `
+        <div>
+              <iframe class="main__video" src="${costume[i].video[0]}" > </iframe>
+         </div>
+        `;
+      }
       place.append(row);
       continue;
     }
@@ -393,6 +440,13 @@ function showDesktopCostume() {
 
         row.append(a);
       }
+      if (costume[i].video) {
+        row.innerHTML += `
+        <div>
+              <iframe class="main__video" src="${costume[i].video[0]}" > </iframe>
+         </div>
+        `;
+      }
       place.append(row);
       continue;
     }
@@ -406,9 +460,9 @@ function showDesktopCostume() {
       let a = document.createElement("a");
       a.className = "my-auto";
       a.innerHTML = `
-    <a href="./src/img/${name}.jpg">
-      <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
-    </a>`;
+      <a href="./src/img/${name}.jpg">
+        <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
+      </a>`;
 
       if (costume[i].imgs.length === 7 && k >= 4) {
         div7.append(a);
@@ -417,6 +471,14 @@ function showDesktopCostume() {
 
       row.append(a);
     }
+    if (costume[i].video) {
+      row.innerHTML += `
+      <div>
+            <iframe class="main__video" src="${costume[i].video[0]}" > </iframe>
+       </div>
+      `;
+    }
+
     row.append(div7);
 
     place.append(row);
