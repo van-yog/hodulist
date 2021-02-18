@@ -53,6 +53,7 @@ costume.push({
 costume.push({
   name: "Chess",
   imgs: ["chess_1", "chess_2", "chess_3", "chess_4"],
+  video: ["https://www.youtube.com/embed/BVR_RI-ddiA?rel=0&showinfo=0"],
 });
 
 costume.push({
@@ -223,6 +224,7 @@ costume.push({
     "izba_1",
   ],
 });
+
 let costumeDesktop = document.querySelector("#costumeDesktop");
 let costumeDesktop2 = document.querySelector("#costumeDesktop2");
 let place = costumeDesktop;
@@ -425,6 +427,13 @@ function showDesktopCostume() {
 
         row.append(a);
       }
+      if (costume[i].video) {
+        row.innerHTML += `
+        <div>
+              <iframe class="main__video" src="${costume[i].video[0]}" > </iframe>
+         </div>
+        `;
+      }
       place.append(row);
       continue;
     }
@@ -438,9 +447,9 @@ function showDesktopCostume() {
       let a = document.createElement("a");
       a.className = "my-auto";
       a.innerHTML = `
-    <a href="./src/img/${name}.jpg">
-      <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
-    </a>`;
+      <a href="./src/img/${name}.jpg">
+        <img class="img-costume" src="./src/img/desktop/${name}.jpg" />
+      </a>`;
 
       if (costume[i].imgs.length === 7 && k >= 4) {
         div7.append(a);
@@ -449,6 +458,14 @@ function showDesktopCostume() {
 
       row.append(a);
     }
+    if (costume[i].video) {
+      row.innerHTML += `
+      <div>
+            <iframe class="main__video" src="${costume[i].video[0]}" > </iframe>
+       </div>
+      `;
+    }
+
     row.append(div7);
 
     place.append(row);
